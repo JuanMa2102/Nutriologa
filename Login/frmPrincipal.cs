@@ -86,5 +86,17 @@ namespace Login
             fl.ShowDialog();
             fl.Dispose();
         }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            frmConsultarCita fl = new frmConsultarCita();
+            this.Visible = false;
+            fl.ShowDialog();
+            fl.Dispose();
+            if (fl.salir)
+            {
+                this.Visible = true;
+            }
+        }
     }
 }
