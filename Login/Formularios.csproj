@@ -67,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgendarCita.resx">
+      <DependentUpon>frmAgendarCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\header-sistema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevacita-estilo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar-estilo2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
