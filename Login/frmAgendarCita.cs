@@ -55,5 +55,10 @@ namespace Login
             gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
             btn.Region = new Region(gp);
         }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -60,7 +60,7 @@
             this.btnNuevaCita.ForeColor = System.Drawing.Color.White;
             this.btnNuevaCita.Image = global::Login.Properties.Resources.nuevacita_estilo1;
             this.btnNuevaCita.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNuevaCita.Location = new System.Drawing.Point(32, 105);
+            this.btnNuevaCita.Location = new System.Drawing.Point(368, 118);
             this.btnNuevaCita.Name = "btnNuevaCita";
             this.btnNuevaCita.Size = new System.Drawing.Size(216, 149);
             this.btnNuevaCita.TabIndex = 8;
@@ -104,13 +104,14 @@
             this.btn2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.ForeColor = System.Drawing.Color.White;
             this.btn2.Image = global::Login.Properties.Resources.nuevacita_estilo1;
-            this.btn2.Location = new System.Drawing.Point(32, 260);
+            this.btn2.Location = new System.Drawing.Point(32, 118);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(216, 146);
             this.btn2.TabIndex = 10;
             this.btn2.Text = "NUEVA CITA";
             this.btn2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn3
             // 
