@@ -21,7 +21,7 @@ namespace Login
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new frmLogin());
             //Application.Run(new frmInicio());
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmPacientes());
         }
     }
 }
