@@ -71,14 +71,6 @@ namespace Login
 
         private void btnPaciente_Click(object sender, EventArgs e)
         {
-            frmPaciente fl = new frmPaciente();
-            this.Visible = false;
-            fl.ShowDialog();
-            fl.Dispose();
-            if (fl.salir)
-            {
-                this.Visible = true;
-            }
 
         }
 
