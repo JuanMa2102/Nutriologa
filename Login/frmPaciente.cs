@@ -11,13 +11,17 @@ using System.Windows.Forms;
 
 namespace Login
 {
+
     public partial class frmPaciente : Form
     {
+        public bool salir = false;
         public frmPaciente()
         {
             InitializeComponent();
             redondear();
             redondear(btnAtras);
+            redondear(btnGuardar);
+            redondear(btnRestablecer);
         }
         public void redondear(Button btn)
         {
@@ -51,6 +55,27 @@ namespace Login
             gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
             gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
             this.Region = new Region(gp);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void campoapellido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Close();
+            salir = true;
         }
     }
 }
