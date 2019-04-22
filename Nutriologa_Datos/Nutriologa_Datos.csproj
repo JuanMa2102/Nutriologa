@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ApplicationBlocks.Data">
-      <HintPath>..\..\..\..\Users\Felipe\Downloads\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <HintPath>..\..\..\Users\manue\Documents\Hecotours 20_10_2017\CreativaSL.WinForm.VentaBoletos\CreativaSL.WinForm.VentaBoletos\bin\Debug\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
