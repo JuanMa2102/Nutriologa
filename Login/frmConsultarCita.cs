@@ -13,13 +13,10 @@ namespace Login
 {
     public partial class frmConsultarCita : Form
     {
-        public bool salir = false;
         public frmConsultarCita()
         {
             InitializeComponent();
             redondear();
-            redondear(btnAgendar);
-
 
         }
         public void redondear(Button btn)
@@ -33,7 +30,7 @@ namespace Login
             gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
             btn.Region = new Region(gp);
         }
-        public void redondear(TextBox btn)
+        public void redondear(Panel btn)
         {
             Rectangle r = new Rectangle(0, 0, btn.Width, btn.Height);
             GraphicsPath gp = new GraphicsPath();
@@ -84,12 +81,6 @@ namespace Login
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Close();
-            salir = true;
-        }
-
-        private void campo1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -21,7 +21,11 @@ namespace Login
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new frmLogin());
             //Application.Run(new frmInicio());
+<<<<<<< HEAD
             Application.Run(new frmPacientes());
+=======
+            Application.Run(new frmPrincipal());
+>>>>>>> parent of 6f39286... Felipe Avelino
         }
     }
 }
