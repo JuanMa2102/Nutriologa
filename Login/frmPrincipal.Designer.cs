@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelNav = new System.Windows.Forms.Panel();
+            this.imageUsuario = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.btnLiberar = new System.Windows.Forms.Button();
@@ -37,11 +38,10 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPaciente = new System.Windows.Forms.Button();
-            this.imageUsuario = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelNav
@@ -59,6 +59,16 @@
             this.panelNav.Name = "panelNav";
             this.panelNav.Size = new System.Drawing.Size(206, 616);
             this.panelNav.TabIndex = 0;
+            // 
+            // imageUsuario
+            // 
+            this.imageUsuario.Image = global::Login.Properties.Resources.thanos_0;
+            this.imageUsuario.Location = new System.Drawing.Point(13, 39);
+            this.imageUsuario.Name = "imageUsuario";
+            this.imageUsuario.Size = new System.Drawing.Size(180, 111);
+            this.imageUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageUsuario.TabIndex = 7;
+            this.imageUsuario.TabStop = false;
             // 
             // btnCerrar
             // 
@@ -105,6 +115,7 @@
             this.btnConsultar.TabIndex = 0;
             this.btnConsultar.Text = "Consultar Cita";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnCita
             // 
@@ -169,16 +180,6 @@
             this.btnPaciente.UseVisualStyleBackColor = false;
             this.btnPaciente.Click += new System.EventHandler(this.btnPaciente_Click);
             // 
-            // imageUsuario
-            // 
-            this.imageUsuario.Image = global::Login.Properties.Resources.thanos_0;
-            this.imageUsuario.Location = new System.Drawing.Point(13, 39);
-            this.imageUsuario.Name = "imageUsuario";
-            this.imageUsuario.Size = new System.Drawing.Size(180, 111);
-            this.imageUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageUsuario.TabIndex = 7;
-            this.imageUsuario.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -211,8 +212,8 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.panelNav.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

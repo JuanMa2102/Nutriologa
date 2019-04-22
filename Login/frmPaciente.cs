@@ -11,16 +11,13 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class frmConsultarCita : Form
+    public partial class frmPaciente : Form
     {
-        public bool salir = false;
-        public frmConsultarCita()
+        public frmPaciente()
         {
             InitializeComponent();
             redondear();
-            redondear(btnAgendar);
-
-
+            redondear(btnAtras);
         }
         public void redondear(Button btn)
         {
@@ -33,7 +30,7 @@ namespace Login
             gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
             btn.Region = new Region(gp);
         }
-        public void redondear(TextBox btn)
+        public void redondear(Panel btn)
         {
             Rectangle r = new Rectangle(0, 0, btn.Width, btn.Height);
             GraphicsPath gp = new GraphicsPath();
@@ -54,42 +51,6 @@ namespace Login
             gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
             gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
             this.Region = new Region(gp);
-        }
-
-        private void btnCita_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelNav_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmModificarCita_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Close();
-            salir = true;
-        }
-
-        private void campo1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

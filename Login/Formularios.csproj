@@ -68,13 +68,8 @@
     <Compile Include="frmPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="frmPacientes.Designer.cs">
       <DependentUpon>frmPacientes.cs</DependentUpon>
-=======
-    <Compile Include="frmConsultarCita.Designer.cs">
-      <DependentUpon>frmConsultarCita.cs</DependentUpon>
->>>>>>> parent of 6f39286... Felipe Avelino
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -87,13 +82,8 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="frmPacientes.resx">
       <DependentUpon>frmPacientes.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="frmConsultarCita.resx">
-      <DependentUpon>frmConsultarCita.cs</DependentUpon>
->>>>>>> parent of 6f39286... Felipe Avelino
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
