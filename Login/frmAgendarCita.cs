@@ -16,10 +16,11 @@ namespace Login
         public frmAgendarCita()
         {
             InitializeComponent();
+            //redondear(btnEliminar);
             redondear(btnNuevaCita);
-            redondear(btn2);
-            redondear(btn3);
-            redondear(btnAtras);
+            redondear(btnConsultarCita);
+            redondear(btnEliminarCita);
+            redondear(pnlGrid);
         }
 
         public void redondear(Button btn)
