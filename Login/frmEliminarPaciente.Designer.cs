@@ -60,6 +60,7 @@
             this.btnSI.TabIndex = 1;
             this.btnSI.Text = "SI";
             this.btnSI.UseVisualStyleBackColor = false;
+            this.btnSI.Click += new System.EventHandler(this.btnSI_Click);
             // 
             // btnNO
             // 
