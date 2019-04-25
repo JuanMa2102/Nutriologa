@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nutriologa_Global;
+using Nutriologa_Negocio;
 
 namespace Login
 {
@@ -69,6 +71,31 @@ namespace Login
             {
 
             }
+        }
+
+        private void btnSI_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int verificar = 0;
+                Paciente p = new Paciente();
+                p.IDPaciente = 1;
+                Paciente_Negocio paciente = new Paciente_Negocio();
+                paciente.EliminarPaciente(p, ref verificar);
+                if(verificar == 1)
+                {
+                    
+                    frmPacientes fp = new frmPacientes();
+                    fp.ShowDialog();
+                    fp.Dispose();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }
