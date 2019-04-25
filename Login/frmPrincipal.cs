@@ -71,7 +71,7 @@ namespace Login
 
         private void btnPaciente_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
@@ -90,6 +90,18 @@ namespace Login
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             frmConsultarCita fl = new frmConsultarCita();
+            this.Visible = false;
+            fl.ShowDialog();
+            fl.Dispose();
+            if (fl.salir)
+            {
+                this.Visible = true;
+            }
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            frmPacientes fl = new frmPacientes();
             this.Visible = false;
             fl.ShowDialog();
             fl.Dispose();

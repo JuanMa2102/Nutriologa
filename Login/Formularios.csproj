@@ -175,6 +175,18 @@
   <ItemGroup>
     <None Include="Resources\header-sistema.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-6-style2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-6-style2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-10.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
