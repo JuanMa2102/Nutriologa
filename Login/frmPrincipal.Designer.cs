@@ -72,6 +72,7 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.btnCerrar.Font = new System.Drawing.Font("Arial", 12F);
             this.btnCerrar.ForeColor = System.Drawing.Color.Black;
             this.btnCerrar.Location = new System.Drawing.Point(13, 409);
@@ -79,22 +80,25 @@
             this.btnCerrar.Size = new System.Drawing.Size(180, 48);
             this.btnCerrar.TabIndex = 6;
             this.btnCerrar.Text = "Cerrar Sesion";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnGenerar
             // 
+            this.btnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.btnGenerar.Font = new System.Drawing.Font("Arial", 12F);
             this.btnGenerar.ForeColor = System.Drawing.Color.Black;
             this.btnGenerar.Location = new System.Drawing.Point(13, 334);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(180, 48);
             this.btnGenerar.TabIndex = 2;
-            this.btnGenerar.Text = "Generar Ficha";
-            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Text = "Nuevo Paciente";
+            this.btnGenerar.UseVisualStyleBackColor = false;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // btnLiberar
             // 
+            this.btnLiberar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.btnLiberar.Font = new System.Drawing.Font("Arial", 12F);
             this.btnLiberar.ForeColor = System.Drawing.Color.Black;
             this.btnLiberar.Location = new System.Drawing.Point(13, 260);
@@ -102,10 +106,11 @@
             this.btnLiberar.Size = new System.Drawing.Size(180, 48);
             this.btnLiberar.TabIndex = 1;
             this.btnLiberar.Text = "Liberar Paciente";
-            this.btnLiberar.UseVisualStyleBackColor = true;
+            this.btnLiberar.UseVisualStyleBackColor = false;
             // 
             // btnConsultar
             // 
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.btnConsultar.FlatAppearance.BorderSize = 0;
             this.btnConsultar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.Color.Black;
@@ -114,7 +119,7 @@
             this.btnConsultar.Size = new System.Drawing.Size(180, 48);
             this.btnConsultar.TabIndex = 0;
             this.btnConsultar.Text = "Consultar Cita";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnCita
