@@ -9,8 +9,9 @@ using System.ComponentModel;
 
 namespace Nutriologa_Negocio
 {
-    public class Cita_Negocio
+   public class Cita_Negocio
     {
+        
         public Cita cita = new Cita();
         public bool tipo = false;
         public string Conexion { get; set; }
@@ -24,7 +25,12 @@ namespace Nutriologa_Negocio
             LlenarListaCita();
         }
        
-
+        public void CrearCita(Cita c, ref int verificar)
+        {
+            Cita_Datos cd = new Cita_Datos();
+            cd.CrearCita(c, ref verificar);
+        }
+     
         public void LlenarListaCita()
         {
             try
