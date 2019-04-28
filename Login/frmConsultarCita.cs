@@ -8,19 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nutriologa_Global;
+using Nutriologa_Negocio;
 
 namespace Login
 {
     public partial class frmConsultarCita : Form
     {
+
+        private Cita_Negocio Model { get; set; }
+        Cita cita = new Cita();
         public bool salir = false;
         public frmConsultarCita()
         {
             InitializeComponent();
             redondear();
             redondear(btnAgendar);
-
-
+            Model = new Cita_Negocio(Comun.Conexion);
         }
         public void redondear(Button btn)
         {
@@ -90,6 +94,21 @@ namespace Login
         private void campo1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgendar_Click(object sender, EventArgs e)
+        {
+            IngresarDatos();
+            //frmAgendarCita agendar = new frmAgendarCita(cita);
+            //agendar.ShowDialog();
+            //agendar.Dispose();
+            frmAgendarCita.BuscarCita = cita;
+            this.Close();
+        }
+        public void IngresarDatos()
+        {
+            cita.Nombre = txtNombre.Text;
+            cita.Apellido = txtApellido.Text;
         }
     }
 }

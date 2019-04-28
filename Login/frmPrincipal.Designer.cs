@@ -139,6 +139,7 @@
             this.btnCita.Text = "AGENDAR CITA";
             this.btnCita.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCita.UseVisualStyleBackColor = false;
+            this.btnCita.Click += new System.EventHandler(this.btnCita_Click);
             // 
             // btnAtras
             // 

@@ -8,20 +8,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nutriologa_Negocio;
+using Nutriologa_Global;
 
 namespace Login
 {
     public partial class frmAgendarCita : Form
     {
+        private Cita_Negocio Model { get; set; }
+        public static Cita BuscarCita = new Cita();
         public frmAgendarCita()
         {
             InitializeComponent();
+            //redondear(btnEliminar);
             redondear(btnNuevaCita);
-            redondear(btn2);
-            redondear(btn3);
-            redondear(btnAtras);
-        }
+            redondear(btnConsultarCita);
+            redondear(btnEliminarCita);
+            redondear(pnlGrid);
+            Model = new Cita_Negocio(Comun.Conexion);
+            llenarForm();
 
+        }
+        //public frmAgendarCita(Cita cita)
+        //{
+        //    InitializeComponent();
+        //    //redondear(btnEliminar);
+        //    redondear(btnNuevaCita);
+        //    redondear(btnConsultarCita);
+        //    redondear(btnEliminarCita);
+        //    redondear(pnlGrid);
+        //    Model = new Cita_Negocio(Comun.Conexion);
+        //    this.BuscarCita = cita;
+        //    recargar();
+        //}
+        public void llenarForm()
+        {
+            try
+            {
+                dgvPaciente.AutoGenerateColumns = false;
+                dgvPaciente.DataSource = Model.ListaCita;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public void recargar()
+        {
+            try
+            {
+                Model.LlenarListaCitaBusqueda(BuscarCita);
+                dgvPaciente.AutoGenerateColumns = false;
+                dgvPaciente.DataSource = Model.ListaCita;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public void redondear(Button btn)
         {
             Rectangle r = new Rectangle(0, 0, btn.Width, btn.Height);
@@ -59,6 +103,14 @@ namespace Login
         private void btn2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConsultarCita_Click(object sender, EventArgs e)
+        {
+            frmConsultarCita cita = new frmConsultarCita();
+            cita.ShowDialog();
+            cita.Dispose();
+            this.recargar();
         }
     }
 }

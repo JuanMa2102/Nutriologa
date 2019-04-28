@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class frmAgendarCita
+    partial class frmAgendarPaciente
     {
         /// <summary>
         /// Required designer variable.
@@ -34,15 +34,17 @@
             this.dgvPaciente = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlGrid = new System.Windows.Forms.Panel();
-            this.btnEliminarCita = new System.Windows.Forms.Button();
-            this.btnConsultarCita = new System.Windows.Forms.Button();
-            this.btnNuevaCita = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnLiberar = new System.Windows.Forms.Button();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IDCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +65,8 @@
             this.IDCita,
             this.Paciente,
             this.Fecha,
-            this.Horario});
+            this.Horario,
+            this.Edad});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,61 +111,77 @@
             this.pnlGrid.Size = new System.Drawing.Size(1008, 529);
             this.pnlGrid.TabIndex = 14;
             // 
-            // btnEliminarCita
+            // btnEliminar
             // 
-            this.btnEliminarCita.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
-            this.btnEliminarCita.FlatAppearance.BorderSize = 0;
-            this.btnEliminarCita.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(81)))));
-            this.btnEliminarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarCita.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.btnEliminarCita.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCita.Image = global::Login.Properties.Resources.ico_10;
-            this.btnEliminarCita.Location = new System.Drawing.Point(32, 374);
-            this.btnEliminarCita.Name = "btnEliminarCita";
-            this.btnEliminarCita.Size = new System.Drawing.Size(147, 112);
-            this.btnEliminarCita.TabIndex = 12;
-            this.btnEliminarCita.Text = "ELIMINAR CITA";
-            this.btnEliminarCita.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminarCita.UseVisualStyleBackColor = false;
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(81)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = global::Login.Properties.Resources.ico_2;
+            this.btnEliminar.Location = new System.Drawing.Point(32, 463);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(147, 112);
+            this.btnEliminar.TabIndex = 15;
+            this.btnEliminar.Text = "ELIMINAR PACIENTE";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // btnConsultarCita
+            // btnModificar
             // 
-            this.btnConsultarCita.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConsultarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
-            this.btnConsultarCita.FlatAppearance.BorderSize = 0;
-            this.btnConsultarCita.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(81)))));
-            this.btnConsultarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarCita.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.btnConsultarCita.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCita.Image = global::Login.Properties.Resources.ico_10;
-            this.btnConsultarCita.Location = new System.Drawing.Point(32, 241);
-            this.btnConsultarCita.Name = "btnConsultarCita";
-            this.btnConsultarCita.Size = new System.Drawing.Size(147, 112);
-            this.btnConsultarCita.TabIndex = 11;
-            this.btnConsultarCita.Text = "CONSULTAR CITA";
-            this.btnConsultarCita.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnConsultarCita.UseVisualStyleBackColor = false;
-            this.btnConsultarCita.Click += new System.EventHandler(this.btnConsultarCita_Click);
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(81)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Image = global::Login.Properties.Resources.ico_3;
+            this.btnModificar.Location = new System.Drawing.Point(32, 345);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(147, 112);
+            this.btnModificar.TabIndex = 12;
+            this.btnModificar.Text = "MODIFICAR PACIENTE";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnModificar.UseVisualStyleBackColor = false;
             // 
-            // btnNuevaCita
+            // btnLiberar
             // 
-            this.btnNuevaCita.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNuevaCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
-            this.btnNuevaCita.FlatAppearance.BorderSize = 0;
-            this.btnNuevaCita.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(81)))));
-            this.btnNuevaCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaCita.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.btnNuevaCita.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaCita.Image = global::Login.Properties.Resources.ico_10;
-            this.btnNuevaCita.Location = new System.Drawing.Point(32, 109);
-            this.btnNuevaCita.Name = "btnNuevaCita";
-            this.btnNuevaCita.Size = new System.Drawing.Size(147, 112);
-            this.btnNuevaCita.TabIndex = 10;
-            this.btnNuevaCita.Text = "NUEVA CITA";
-            this.btnNuevaCita.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevaCita.UseVisualStyleBackColor = false;
-            this.btnNuevaCita.Click += new System.EventHandler(this.btn2_Click);
+            this.btnLiberar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLiberar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
+            this.btnLiberar.FlatAppearance.BorderSize = 0;
+            this.btnLiberar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(81)))));
+            this.btnLiberar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLiberar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLiberar.ForeColor = System.Drawing.Color.White;
+            this.btnLiberar.Image = global::Login.Properties.Resources.ico_4;
+            this.btnLiberar.Location = new System.Drawing.Point(32, 227);
+            this.btnLiberar.Name = "btnLiberar";
+            this.btnLiberar.Size = new System.Drawing.Size(147, 112);
+            this.btnLiberar.TabIndex = 11;
+            this.btnLiberar.Text = "LIBERAR PACIENTE";
+            this.btnLiberar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLiberar.UseVisualStyleBackColor = false;
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
+            this.btnGenerar.FlatAppearance.BorderSize = 0;
+            this.btnGenerar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(81)))));
+            this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerar.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.btnGenerar.ForeColor = System.Drawing.Color.White;
+            this.btnGenerar.Image = global::Login.Properties.Resources.ico_5;
+            this.btnGenerar.Location = new System.Drawing.Point(32, 109);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(147, 112);
+            this.btnGenerar.TabIndex = 10;
+            this.btnGenerar.Text = "GENERAR FICHA MEDICA";
+            this.btnGenerar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGenerar.UseVisualStyleBackColor = false;
             // 
             // btnAtras
             // 
@@ -192,53 +211,60 @@
             // 
             // IDCita
             // 
-            this.IDCita.DataPropertyName = "IDCita";
-            this.IDCita.HeaderText = "IDCita";
+            this.IDCita.DataPropertyName = "IDPaciente";
+            this.IDCita.HeaderText = "IDPaciente";
             this.IDCita.Name = "IDCita";
             this.IDCita.ReadOnly = true;
             this.IDCita.Visible = false;
-            this.IDCita.Width = 150;
+            this.IDCita.Width = 175;
             // 
             // Paciente
             // 
             this.Paciente.DataPropertyName = "Nombre";
-            this.Paciente.HeaderText = "Paciente";
+            this.Paciente.HeaderText = "Nombre";
             this.Paciente.Name = "Paciente";
             this.Paciente.ReadOnly = true;
-            this.Paciente.Width = 400;
+            this.Paciente.Width = 320;
             // 
             // Fecha
             // 
-            this.Fecha.DataPropertyName = "Fecha";
-            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.DataPropertyName = "Apellido";
+            this.Fecha.HeaderText = "Apellido";
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             this.Fecha.Width = 300;
             // 
             // Horario
             // 
-            this.Horario.DataPropertyName = "Horario";
-            this.Horario.HeaderText = "Horario";
+            this.Horario.DataPropertyName = "Telefono";
+            this.Horario.HeaderText = "Telefono";
             this.Horario.Name = "Horario";
             this.Horario.ReadOnly = true;
-            this.Horario.Width = 300;
+            this.Horario.Width = 250;
             // 
-            // frmAgendarCita
+            // Edad
+            // 
+            this.Edad.DataPropertyName = "Edad";
+            this.Edad.HeaderText = "Edad";
+            this.Edad.Name = "Edad";
+            // 
+            // frmAgendarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1300, 650);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.pnlGrid);
-            this.Controls.Add(this.btnEliminarCita);
-            this.Controls.Add(this.btnConsultarCita);
-            this.Controls.Add(this.btnNuevaCita);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnLiberar);
+            this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "frmAgendarCita";
+            this.Name = "frmAgendarPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).EndInit();
@@ -253,14 +279,16 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnNuevaCita;
-        private System.Windows.Forms.Button btnConsultarCita;
-        private System.Windows.Forms.Button btnEliminarCita;
+        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.Button btnLiberar;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Panel pnlGrid;
         private System.Windows.Forms.DataGridView dgvPaciente;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Horario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
     }
 }
