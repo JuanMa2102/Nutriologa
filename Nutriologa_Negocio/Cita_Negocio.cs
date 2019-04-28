@@ -11,6 +11,8 @@ namespace Nutriologa_Negocio
 {
     public class Cita_Negocio
     {
+        public Cita cita = new Cita();
+        public bool tipo = false;
         public string Conexion { get; set; }
         public string UserID { get; set; }
         public BindingList<Cita> ListaCita { get; set; }
@@ -21,6 +23,7 @@ namespace Nutriologa_Negocio
             ListaCita = new BindingList<Cita>(new List<Cita>());
             LlenarListaCita();
         }
+       
 
         public void LlenarListaCita()
         {
@@ -28,6 +31,25 @@ namespace Nutriologa_Negocio
             {
                 Cita_Datos RegionDatos = new Cita_Datos();
                 List<Cita> ListaAux = RegionDatos.ObtenerCitas(Conexion);
+                foreach (var Item in ListaAux)
+                {
+                    ListaCita.Add(Item);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void LlenarListaCitaBusqueda(Cita cita)
+        {
+            try
+            {
+                ListaCita.Clear();
+                Cita_Datos RegionDatos = new Cita_Datos();
+                List<Cita> ListaAux = RegionDatos.ObtenerCitasBusqueda(Conexion,cita);
                 foreach (var Item in ListaAux)
                 {
                     ListaCita.Add(Item);

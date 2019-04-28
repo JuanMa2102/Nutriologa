@@ -47,17 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAgendarCita.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAgendarCita.Designer.cs">
       <DependentUpon>frmAgendarCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgendarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgendarPaciente.Designer.cs">
+      <DependentUpon>frmAgendarPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConsultarCita.cs">
       <SubType>Form</SubType>
@@ -97,6 +97,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgendarCita.resx">
+      <DependentUpon>frmAgendarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgendarPaciente.resx">
+      <DependentUpon>frmAgendarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultarCita.resx">
       <DependentUpon>frmConsultarCita.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +192,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ico-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-51.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -10,6 +10,7 @@ namespace Nutriologa_Global
     {
         public int IDCita { get; set; }
         public string Nombre { get; set; }
+        public string Apellido { get; set; }
         public DateTime Fecha { get; set; }
         public string Horario { get; set; }
 
