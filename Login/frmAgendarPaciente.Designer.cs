@@ -174,7 +174,7 @@
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerar.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
             this.btnGenerar.ForeColor = System.Drawing.Color.White;
-            this.btnGenerar.Image = global::Login.Properties.Resources.ico_5;
+            this.btnGenerar.Image = global::Login.Properties.Resources.ico_10;
             this.btnGenerar.Location = new System.Drawing.Point(32, 109);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(147, 112);

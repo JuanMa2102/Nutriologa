@@ -13,6 +13,9 @@ namespace Nutriologa_Global
         public string Apellido { get; set; }
         public DateTime Fecha { get; set; }
         public string Horario { get; set; }
+        public string Numero { get; set; }
+        public int IDNombre { get; set; }
+        public int IDHorario { get; set; }
 
     }
 }
