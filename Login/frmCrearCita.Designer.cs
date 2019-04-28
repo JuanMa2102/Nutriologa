@@ -66,6 +66,7 @@
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(171, 20);
             this.txtNom.TabIndex = 2;
+            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
             // 
             // txtap
             // 
@@ -82,6 +83,7 @@
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(171, 20);
             this.txtNum.TabIndex = 4;
+            this.txtNum.TextChanged += new System.EventHandler(this.txtNum_TextChanged);
             // 
             // txtFecha
             // 
@@ -90,6 +92,7 @@
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(171, 20);
             this.txtFecha.TabIndex = 5;
+            this.txtFecha.TextChanged += new System.EventHandler(this.txtFecha_TextChanged);
             // 
             // txtHorario
             // 
@@ -98,6 +101,7 @@
             this.txtHorario.Name = "txtHorario";
             this.txtHorario.Size = new System.Drawing.Size(171, 20);
             this.txtHorario.TabIndex = 6;
+            this.txtHorario.TextChanged += new System.EventHandler(this.txtHorario_TextChanged);
             // 
             // label1
             // 
@@ -222,7 +226,6 @@
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.TextBox txtap;
         private System.Windows.Forms.TextBox txtNum;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtHorario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -231,5 +234,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txtFecha;
     }
 }

@@ -15,6 +15,9 @@ namespace Login
 {
     public partial class frmCrearCita : Form
     {
+        int fecha;
+        int horario;
+        int numtel;
         public bool salir = false;
         public frmCrearCita()
         {
@@ -75,7 +78,7 @@ namespace Login
                 int verificar = 0;
                 Cita c = new Cita();
                 c.idcita = 1;
-                c.fecha = 12/08/97; 
+                c.fecha = fecha; 
                 c.horario = 14;
                 c.idpaciente = 1;
                 Cita_Negocio cita = new Cita_Negocio();
@@ -99,6 +102,26 @@ namespace Login
             {
                 throw ex;
             }
+        }
+
+        private void txtNom_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtNum_TextChanged(object sender, EventArgs e)
+        {
+           numtel = Convert.ToInt32(txtNum.Text);
+        }
+
+        private void txtFecha_TextChanged(object sender, EventArgs e)
+        {
+          fecha = Convert.ToInt32(txtFecha.Text);
+        }
+
+        private void txtHorario_TextChanged(object sender, EventArgs e)
+        {
+            horario = Convert.ToInt32(txtHorario.Text);
         }
     }
 }
