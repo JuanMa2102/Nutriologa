@@ -45,6 +45,7 @@ namespace Login
         {
             try
             {
+                Model.LlenarListaCita();
                 dgvPaciente.AutoGenerateColumns = false;
                 dgvPaciente.DataSource = Model.ListaCita;
             }
@@ -102,7 +103,10 @@ namespace Login
 
         private void btn2_Click(object sender, EventArgs e)
         {
-
+            frmCrearCita cita = new frmCrearCita();
+            cita.ShowDialog();
+            cita.Dispose();
+            this.llenarForm();
         }
 
         private void btnConsultarCita_Click(object sender, EventArgs e)

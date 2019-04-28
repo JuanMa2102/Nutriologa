@@ -15,6 +15,7 @@ namespace Login
 {
     public partial class frmCrearCita : Form
     {
+        Cita_Negocio Model { get; set; }
         public bool salir = false;
         public frmCrearCita()
         {
@@ -22,7 +23,21 @@ namespace Login
             redondear(btnGuardar);
             redondear(btnrestablecer);
             redondear();
+            Model = new Cita_Negocio(Comun.Conexion);
+            llenarCombo();
         }
+
+        public void llenarCombo()
+        {
+            cmbHorario.DataSource = Model.ListaHorario;
+            cmbHorario.DisplayMember = "Horario";
+            cmbHorario.ValueMember = "IDHorario";
+
+            cmbPaciente.DataSource = Model.ListaPaciente;
+            cmbPaciente.DisplayMember = "Nombre";
+            cmbPaciente.ValueMember = "IDNombre";
+        }
+
         public void redondear(Button btn)
         {
             Rectangle r = new Rectangle(0, 0, btn.Width, btn.Height);
@@ -72,27 +87,19 @@ namespace Login
         {
             try
             {
-                int verificar = 0;
+                int verificar = 1;
                 Cita c = new Cita();
-                c.idcita = 1;
-                c.fecha = 12/08/97; 
-                c.horario = 14;
-                c.idpaciente = 1;
-                Cita_Negocio cita = new Cita_Negocio();
-                cita.CrearCita(c, ref verificar);
+                c.IDNombre = Convert.ToInt32(this.cmbPaciente.SelectedValue.ToString());
+                c.Fecha = dtmFecha.Value;
+                c.IDHorario = Convert.ToInt32(this.cmbHorario.SelectedValue.ToString());
+                Model.CrearCita(c, ref verificar);
                 if (verificar == 1)
                 {
-
-                    frmAgendarCita fp = new frmAgendarCita();
-                    fp.ShowDialog();
-                    fp.Dispose();
                     this.Close();
                 }
                 else
                 {
-                    frmCrearCita fc = new frmCrearCita();
                     this.Close();
-
                 }
             }
             catch (Exception ex)

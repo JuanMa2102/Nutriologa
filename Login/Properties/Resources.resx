@@ -163,9 +163,6 @@
   <data name="guardar-estilo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardar-estilo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ico-6-style21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ico-6-style21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
   <data name="ico-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico-31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,7 +172,7 @@
   <data name="ico-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico-41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ico-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ico-51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ico_1_style2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico-1-style2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -182,7 +182,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox1.Image = global::Login.Properties.Resources.header_sistema;
-            this.pictureBox1.InitialImage = global::Login.Properties.Resources.WhatsApp_Image_2019_04_07_at_11_22_25_PM;
+            this.pictureBox1.InitialImage = global::Login.Properties.Resources.header_sistema;
             this.pictureBox1.Location = new System.Drawing.Point(32, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1207, 77);
