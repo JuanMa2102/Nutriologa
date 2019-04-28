@@ -15,5 +15,10 @@ namespace Nutriologa_Negocio
             Paciente_Datos pd = new Paciente_Datos();
             pd.EliminarPaciente(p, ref verificar);
         }
+        public void IngresarPaciente(Paciente p, ref int verificar)
+        {
+            Paciente_Datos pd = new Paciente_Datos();
+            pd.IngresarPaciente(p, ref verificar);
+        }
     }
 }

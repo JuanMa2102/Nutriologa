@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nutriologa_Global;
+using Nutriologa_Negocio;
 
 namespace Login
 {
     public partial class frmPacientes : Form
     {
+        Paciente paciente = new Paciente();
         public bool salir = false;
         public frmPacientes()
         {
@@ -117,6 +120,35 @@ namespace Login
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            llenarDatos();
+            int verificar = 0;
+            Paciente_Negocio PacienteNegocio = new Paciente_Negocio();
+            PacienteNegocio.IngresarPaciente(paciente, ref verificar);
+        }
+        public void llenarDatos()
+        {
+            paciente.Nombre = txtNombre.Text;
+            paciente.Apellido = txtApellido.Text;
+            paciente.Telefono = txtTelefono.Text;
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEstatura_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEdad_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

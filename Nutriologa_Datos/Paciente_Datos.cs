@@ -28,5 +28,23 @@ namespace Nutriologa_Datos
                 throw ex;
             }
         }
+        public void IngresarPaciente(Paciente p, ref int verificar)
+        {
+            try
+            {
+
+                object[] Parametros = { p.Nombre, p.Apellido, p.Telefono, p.NivColesterol, p.Promgrasa, p.Estatura, p.Edad, p.Talla, p.Peso, p.Nivtrigliceridos, p.Nivacidourico};
+                object Result = SqlHelper.ExecuteScalar(ConfigurationManager.AppSettings.Get("strConnection"), "dbo.sp_IngresarPaciente", Parametros);
+                if (Result != null)
+                {
+                    int.TryParse(Result.ToString(), out verificar);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
