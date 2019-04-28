@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Comun.cs" />
     <Compile Include="LoginNutriologa.cs" />
+    <Compile Include="Cita .cs" />
     <Compile Include="Paciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -65,6 +65,12 @@
     <Compile Include="frmConsultarCita.Designer.cs">
       <DependentUpon>frmConsultarCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCrearCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearCita.Designer.cs">
+      <DependentUpon>frmCrearCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEliminarPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConsultarCita.resx">
       <DependentUpon>frmConsultarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearCita.resx">
+      <DependentUpon>frmCrearCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEliminarPaciente.resx">
       <DependentUpon>frmEliminarPaciente.cs</DependentUpon>
@@ -186,6 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ico-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-6-style21.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
