@@ -98,5 +98,13 @@ namespace Login
                 this.Visible = true;
             }
         }
+
+        private void btnCita_Click(object sender, EventArgs e)
+        {
+            frmAgendarCita cita = new frmAgendarCita();
+            
+            cita.ShowDialog();
+            cita.Dispose();
+        }
     }
 }

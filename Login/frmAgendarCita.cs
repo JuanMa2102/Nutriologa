@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nutriologa_Negocio;
+using Nutriologa_Global;
 
 namespace Login
 {
     public partial class frmAgendarCita : Form
     {
+        private Cita_Negocio Model { get; set; }
         public frmAgendarCita()
         {
             InitializeComponent();
@@ -21,8 +24,22 @@ namespace Login
             redondear(btnConsultarCita);
             redondear(btnEliminarCita);
             redondear(pnlGrid);
-        }
+            Model = new Cita_Negocio(Comun.Conexion);
+            llenarForm();
 
+        }
+        public void llenarForm()
+        {
+            try
+            {
+                dgvAgendarCita.AutoGenerateColumns = false;
+                dgvAgendarCita.DataSource = Model.ListaCita;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public void redondear(Button btn)
         {
             Rectangle r = new Rectangle(0, 0, btn.Width, btn.Height);
