@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarCita));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Campo2 = new System.Windows.Forms.TextBox();
-            this.campo1 = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.Titulo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAgendar = new System.Windows.Forms.Button();
@@ -61,20 +61,20 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "NOMBRE";
             // 
-            // Campo2
+            // txtApellido
             // 
-            this.Campo2.Location = new System.Drawing.Point(99, 206);
-            this.Campo2.Name = "Campo2";
-            this.Campo2.Size = new System.Drawing.Size(245, 20);
-            this.Campo2.TabIndex = 11;
+            this.txtApellido.Location = new System.Drawing.Point(99, 206);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(245, 20);
+            this.txtApellido.TabIndex = 11;
             // 
-            // campo1
+            // txtNombre
             // 
-            this.campo1.Location = new System.Drawing.Point(99, 120);
-            this.campo1.Name = "campo1";
-            this.campo1.Size = new System.Drawing.Size(245, 20);
-            this.campo1.TabIndex = 10;
-            this.campo1.TextChanged += new System.EventHandler(this.campo1_TextChanged);
+            this.txtNombre.Location = new System.Drawing.Point(99, 120);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(245, 20);
+            this.txtNombre.TabIndex = 10;
+            this.txtNombre.TextChanged += new System.EventHandler(this.campo1_TextChanged);
             // 
             // Titulo
             // 
@@ -109,6 +109,7 @@
             this.btnAgendar.Text = "CONSULTAR";
             this.btnAgendar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAgendar.UseVisualStyleBackColor = false;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // frmConsultarCita
             // 
@@ -122,8 +123,8 @@
             this.Controls.Add(this.btnAgendar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Campo2);
-            this.Controls.Add(this.campo1);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConsultarCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -140,8 +141,8 @@
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Campo2;
-        private System.Windows.Forms.TextBox campo1;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Titulo;
     }

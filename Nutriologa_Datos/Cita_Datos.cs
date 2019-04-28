@@ -38,5 +38,31 @@ namespace Nutriologa_Datos
                 throw ex;
             }
         }
+
+        public List<Cita> ObtenerCitasBusqueda(string Conexion, Cita cita)
+        {
+            try
+            {
+                Conexion = ConfigurationManager.AppSettings.Get("strConnection");
+                List<Cita> Lista = new List<Cita>();
+                Cita Item;
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Conexion, CommandType.StoredProcedure, "dbo.sp_MostrarCitasBusqueda",new SqlParameter("@Nombre",cita.Nombre ), new SqlParameter("@Apellido", cita.Apellido));
+                while (Dr.Read())
+                {
+                    Item = new Cita();
+                    Item.IDCita = !Dr.IsDBNull(Dr.GetOrdinal("IDCita")) ? Dr.GetInt32(Dr.GetOrdinal("IDCita")) : 0;
+                    Item.Nombre = !Dr.IsDBNull(Dr.GetOrdinal("Nombre")) ? Dr.GetString(Dr.GetOrdinal("Nombre")) : string.Empty;
+                    Item.Fecha = !Dr.IsDBNull(Dr.GetOrdinal("Fecha")) ? Dr.GetDateTime(Dr.GetOrdinal("Fecha")) : DateTime.MinValue;
+                    Item.Horario = !Dr.IsDBNull(Dr.GetOrdinal("Horario")) ? Dr.GetString(Dr.GetOrdinal("Horario")) : string.Empty;
+                    Lista.Add(Item);
+                }
+                Dr.Close();
+                return Lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

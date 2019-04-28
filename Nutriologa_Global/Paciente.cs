@@ -13,5 +13,6 @@ namespace Nutriologa_Global
         public string Apellido { get; set; }
         public string Telefono  { get; set; }
         public decimal NivColesterol { get; set; }
+        public int Edad { get; set; }
     }
 }

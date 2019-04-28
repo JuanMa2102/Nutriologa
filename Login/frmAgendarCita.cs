@@ -16,6 +16,7 @@ namespace Login
     public partial class frmAgendarCita : Form
     {
         private Cita_Negocio Model { get; set; }
+        public static Cita BuscarCita = new Cita();
         public frmAgendarCita()
         {
             InitializeComponent();
@@ -28,12 +29,37 @@ namespace Login
             llenarForm();
 
         }
+        //public frmAgendarCita(Cita cita)
+        //{
+        //    InitializeComponent();
+        //    //redondear(btnEliminar);
+        //    redondear(btnNuevaCita);
+        //    redondear(btnConsultarCita);
+        //    redondear(btnEliminarCita);
+        //    redondear(pnlGrid);
+        //    Model = new Cita_Negocio(Comun.Conexion);
+        //    this.BuscarCita = cita;
+        //    recargar();
+        //}
         public void llenarForm()
         {
             try
             {
-                dgvAgendarCita.AutoGenerateColumns = false;
-                dgvAgendarCita.DataSource = Model.ListaCita;
+                dgvPaciente.AutoGenerateColumns = false;
+                dgvPaciente.DataSource = Model.ListaCita;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public void recargar()
+        {
+            try
+            {
+                Model.LlenarListaCitaBusqueda(BuscarCita);
+                dgvPaciente.AutoGenerateColumns = false;
+                dgvPaciente.DataSource = Model.ListaCita;
             }
             catch (Exception ex)
             {
@@ -77,6 +103,14 @@ namespace Login
         private void btn2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConsultarCita_Click(object sender, EventArgs e)
+        {
+            frmConsultarCita cita = new frmConsultarCita();
+            cita.ShowDialog();
+            cita.Dispose();
+            this.recargar();
         }
     }
 }

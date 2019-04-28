@@ -71,7 +71,10 @@ namespace Login
 
         private void btnPaciente_Click(object sender, EventArgs e)
         {
-            
+            frmAgendarPaciente paciente = new frmAgendarPaciente();
+
+            paciente.ShowDialog();
+            paciente.Dispose();
         }
 
         private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
