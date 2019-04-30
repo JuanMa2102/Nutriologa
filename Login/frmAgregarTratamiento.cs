@@ -13,32 +13,31 @@ using Nutriologa_Negocio;
 
 namespace Login
 {
-    public partial class frmLiberarPaciente : Form
+    public partial class frmConsultarCita : Form
     {
-        Paciente paciente = new Paciente();
-        private Paciente_Negocio Model { get; set; }
-        public frmLiberarPaciente(Paciente paciente)
+
+        private Cita_Negocio Model { get; set; }
+        Cita cita = new Cita();
+        public bool salir = false;
+        public frmConsultarCita()
         {
             InitializeComponent();
             redondear();
-            redondear(btnSI);
-            redondear(btnNO);
-            this.paciente = paciente;
-            label1.Text = "¿ Estas seguro de liberar al paciente " + paciente.Nombre +"?";
-            Model = new Paciente_Negocio(Comun.Conexion);
+            redondear(btnAgendar);
+            Model = new Cita_Negocio(Comun.Conexion);
         }
         public void redondear(Button btn)
         {
             Rectangle r = new Rectangle(0, 0, btn.Width, btn.Height);
             GraphicsPath gp = new GraphicsPath();
-            int d = 10;
+            int d = 30;
             gp.AddArc(r.X, r.Y, d, d, 180, 90);
             gp.AddArc(r.X + r.Width - d, r.Y, d, d, 270, 90);
             gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
             gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
             btn.Region = new Region(gp);
         }
-        public void redondear(Panel btn)
+        public void redondear(TextBox btn)
         {
             Rectangle r = new Rectangle(0, 0, btn.Width, btn.Height);
             GraphicsPath gp = new GraphicsPath();
@@ -61,27 +60,55 @@ namespace Login
             this.Region = new Region(gp);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnCita_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelNav_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmModificarCita_Load(object sender, EventArgs e)
         {
 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Close();
-            }
-            catch(Exception ex)
-            {
-
-            }
+            Close();
+            salir = true;
         }
 
-        private void btnSI_Click(object sender, EventArgs e)
+        private void campo1_TextChanged(object sender, EventArgs e)
         {
-            Model.LiberarPaciente(paciente);
+
+        }
+
+        private void btnAgendar_Click(object sender, EventArgs e)
+        {
+            IngresarDatos();
+            //frmAgendarCita agendar = new frmAgendarCita(cita);
+            //agendar.ShowDialog();
+            //agendar.Dispose();
+            frmAgendarCita.BuscarCita = cita;
             this.Close();
+        }
+        public void IngresarDatos()
+        {
+            cita.Nombre = txtNombre.Text;
+            cita.Apellido = txtApellido.Text;
         }
     }
 }

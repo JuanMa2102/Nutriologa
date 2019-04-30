@@ -8,11 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nutriologa_Global;
+using Nutriologa_Negocio;
 
 namespace Login
 {
     public partial class frmPacientes : Form
     {
+        public bool EsModificar = false;
+        Paciente_Negocio Model { get; set; }
+        Paciente paciente = new Paciente();
+        public int id_paciente;
         public bool salir = false;
         public frmPacientes()
         {
@@ -21,6 +27,36 @@ namespace Login
             redondear(btnAtras);
             redondear(btnres);
             redondear();
+            Model = new Paciente_Negocio(Comun.Conexion);
+        }
+        public frmPacientes(Paciente paciente)
+        {
+            InitializeComponent();
+            this.paciente = paciente;
+            id_paciente = paciente.IDPaciente;
+            EsModificar = true;
+            redondear(btnsave);
+            redondear(btnAtras);
+            redondear(btnres);
+            redondear();
+            Model = new Paciente_Negocio(Comun.Conexion);
+            llenar();
+        }
+        public void llenar()
+        {
+            paciente = Model.ModificarPaciente(paciente);
+            txtNombre.Text = paciente.Nombre;
+            txtApellido.Text = paciente.Apellido;
+            txtEdad.Text = paciente.Edad.ToString();
+            txtTelefono.Text = paciente.Telefono.ToString();
+            txtEstatura.Text = paciente.Estatura.ToString();
+            txtEdad.Text = paciente.Edad.ToString();
+            txtTalla.Text = paciente.Talla.ToString();
+            txtPeso.Text = paciente.Peso.ToString();
+            txtGrasa.Text = paciente.PromGrasa.ToString();
+            txtColesterol.Text = paciente.NivColesterol.ToString();
+            txtAcido.Text = paciente.NivAcidoUrico.ToString();
+            txtTrigliserido.Text = paciente.NivTrigliceridos.ToString();
         }
         public void redondear(Button btn)
         {
@@ -117,6 +153,35 @@ namespace Login
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            int verificar = 0;
+            Paciente paciente = new Paciente();
+            paciente.IDPaciente = id_paciente;
+            paciente.Nombre = txtNombre.Text;
+            paciente.Apellido = txtApellido.Text;
+            paciente.Telefono = txtTelefono.Text;
+            paciente.Estatura = Convert.ToDecimal( txtEstatura.Text);
+            paciente.Edad = Convert.ToInt32(txtEdad.Text);
+            paciente.Talla = Convert.ToDecimal(txtTalla.Text);
+            paciente.Peso = Convert.ToDecimal(txtPeso.Text);
+            paciente.PromGrasa = Convert.ToDecimal(txtPeso.Text);
+            paciente.NivColesterol = Convert.ToDecimal(txtColesterol.Text);
+            paciente.NivAcidoUrico = Convert.ToDecimal(txtAcido.Text);
+            paciente.NivTrigliceridos = Convert.ToDecimal(txtTrigliserido.Text);
+            if (EsModificar)
+            {
+                Model.GuardarPacienteModificado(paciente);
+                this.Close();
+            }
+            else
+            {
+                Model.GuardarPaciente(paciente, ref verificar);
+                if (verificar == 1)
+                    this.Close();
+            }
         }
     }
 }

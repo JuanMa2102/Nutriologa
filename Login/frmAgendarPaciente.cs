@@ -34,6 +34,7 @@ namespace Login
         {
             try
             {
+                Model.LlenarLista();
                 dgvPaciente.AutoGenerateColumns = false;
                 dgvPaciente.DataSource = Model.ListaPaciente;
             }
@@ -76,5 +77,78 @@ namespace Login
             btn.Region = new Region(gp);
         }
 
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            frmPacientes p = new frmPacientes();
+            p.ShowDialog();
+            p.Dispose();
+            llenarForm();
+        }
+
+        private void btnLiberar_Click(object sender, EventArgs e)
+        {
+            Paciente paciente = new Paciente();
+            paciente = ObtenerDatos();
+            frmLiberarPaciente liberar = new frmLiberarPaciente(paciente);
+            liberar.ShowDialog();
+            liberar.Dispose();
+            llenarForm();
+        }
+        private Paciente ObtenerDatos()
+        {
+            try
+            {
+                Paciente paciente = new Paciente();
+                foreach (DataGridViewRow row in this.ObtenerFilaSeleccionada())
+                {
+                    paciente.IDPaciente = Convert.ToInt32(row.Cells["IDPaciente"].Value.ToString());
+                    paciente.Nombre = row.Cells["Nombre"].Value.ToString();
+                }
+                return paciente;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        private List<DataGridViewRow> ObtenerFilaSeleccionada()
+        {
+            try
+            {
+                List<DataGridViewRow> rowSelected = new List<DataGridViewRow>();
+                foreach (DataGridViewRow row in dgvPaciente.Rows)
+                {
+                    if (row.Selected)
+                    {
+                        rowSelected.Add(row);
+                    }
+                }
+                return rowSelected;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Paciente paciente = new Paciente();
+            paciente = ObtenerDatos();
+            frmPacientes liberar = new frmPacientes(paciente);
+            liberar.ShowDialog();
+            liberar.Dispose();
+            llenarForm();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Paciente paciente = new Paciente();
+            paciente = ObtenerDatos();
+            frmEliminarPaciente liberar = new frmEliminarPaciente(paciente);
+            liberar.ShowDialog();
+            liberar.Dispose();
+            llenarForm();
+        }
     }
 }

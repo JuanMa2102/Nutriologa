@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(107, 59);
+            this.label1.Location = new System.Drawing.Point(56, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(291, 19);
             this.label1.TabIndex = 0;
@@ -61,6 +61,7 @@
             this.btnSI.TabIndex = 1;
             this.btnSI.Text = "SI";
             this.btnSI.UseVisualStyleBackColor = false;
+            this.btnSI.Click += new System.EventHandler(this.btnSI_Click);
             // 
             // btnNO
             // 

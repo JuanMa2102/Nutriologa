@@ -15,12 +15,15 @@ namespace Login
 {
     public partial class frmEliminarPaciente : Form
     {
-        public frmEliminarPaciente()
+        Paciente p = new Paciente();
+        public frmEliminarPaciente(Paciente paciente)
         {
             InitializeComponent();
             redondear();
             redondear(btnSI);
             redondear(btnNO);
+            p = paciente;
+            label1.Text = "¿Estas seguro de eliminar al paciente " + paciente.Nombre + " ?";
         }
         public void redondear(Button btn)
         {
@@ -78,16 +81,10 @@ namespace Login
             try
             {
                 int verificar = 0;
-                Paciente p = new Paciente();
-                p.IDPaciente = 1;
                 Paciente_Negocio paciente = new Paciente_Negocio(Comun.Conexion);
                 paciente.EliminarPaciente(p, ref verificar);
                 if(verificar == 1)
                 {
-                    
-                    frmPacientes fp = new frmPacientes();
-                    fp.ShowDialog();
-                    fp.Dispose();
                     this.Close();
                 }
             }

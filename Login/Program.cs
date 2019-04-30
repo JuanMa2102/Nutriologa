@@ -19,8 +19,8 @@ namespace Login
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
-            //Application.Run(new frmInicio());
+            //Application.Run(new frmAgendarPaciente());
+            Application.Run(new frmPrincipal());
             //Application.Run(new frmCrearCita());
         }
     }
