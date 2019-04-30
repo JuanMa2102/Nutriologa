@@ -123,6 +123,36 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ico_1_style2_1 {
+            get {
+                object obj = ResourceManager.GetObject("ico-1-style2_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_1_style3 {
+            get {
+                object obj = ResourceManager.GetObject("ico-1-style3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_1_style3_1 {
+            get {
+                object obj = ResourceManager.GetObject("ico-1-style3_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ico_10 {
             get {
                 object obj = ResourceManager.GetObject("ico-10", resourceCulture);
@@ -136,6 +166,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap ico_2 {
             get {
                 object obj = ResourceManager.GetObject("ico-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_2_style3 {
+            get {
+                object obj = ResourceManager.GetObject("ico-2-style3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

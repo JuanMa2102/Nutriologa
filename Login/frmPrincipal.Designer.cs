@@ -92,7 +92,7 @@
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(180, 48);
             this.btnGenerar.TabIndex = 2;
-            this.btnGenerar.Text = "Nuevo Paciente";
+            this.btnGenerar.Text = "Pacientes Activos";
             this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
@@ -105,7 +105,7 @@
             this.btnLiberar.Name = "btnLiberar";
             this.btnLiberar.Size = new System.Drawing.Size(180, 48);
             this.btnLiberar.TabIndex = 1;
-            this.btnLiberar.Text = "Liberar Paciente";
+            this.btnLiberar.Text = "Reportes ";
             this.btnLiberar.UseVisualStyleBackColor = false;
             // 
             // btnConsultar
