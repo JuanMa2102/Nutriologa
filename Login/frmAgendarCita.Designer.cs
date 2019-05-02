@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPaciente = new System.Windows.Forms.DataGridView();
+            this.IDCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlGrid = new System.Windows.Forms.Panel();
             this.btnEliminarCita = new System.Windows.Forms.Button();
@@ -39,10 +43,6 @@
             this.btnNuevaCita = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.IDCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +87,39 @@
             this.dgvPaciente.Size = new System.Drawing.Size(973, 487);
             this.dgvPaciente.TabIndex = 0;
             // 
+            // IDCita
+            // 
+            this.IDCita.DataPropertyName = "IDCita";
+            this.IDCita.HeaderText = "IDCita";
+            this.IDCita.Name = "IDCita";
+            this.IDCita.ReadOnly = true;
+            this.IDCita.Visible = false;
+            this.IDCita.Width = 150;
+            // 
+            // Paciente
+            // 
+            this.Paciente.DataPropertyName = "Nombre";
+            this.Paciente.HeaderText = "Paciente";
+            this.Paciente.Name = "Paciente";
+            this.Paciente.ReadOnly = true;
+            this.Paciente.Width = 400;
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "Fecha";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 300;
+            // 
+            // Horario
+            // 
+            this.Horario.DataPropertyName = "Horario";
+            this.Horario.HeaderText = "Horario";
+            this.Horario.Name = "Horario";
+            this.Horario.ReadOnly = true;
+            this.Horario.Width = 300;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -125,6 +158,7 @@
             this.btnEliminarCita.Text = "ELIMINAR CITA";
             this.btnEliminarCita.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnEliminarCita.UseVisualStyleBackColor = false;
+            this.btnEliminarCita.Click += new System.EventHandler(this.btnEliminarCita_Click);
             // 
             // btnConsultarCita
             // 
@@ -189,39 +223,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            // 
-            // IDCita
-            // 
-            this.IDCita.DataPropertyName = "IDCita";
-            this.IDCita.HeaderText = "IDCita";
-            this.IDCita.Name = "IDCita";
-            this.IDCita.ReadOnly = true;
-            this.IDCita.Visible = false;
-            this.IDCita.Width = 150;
-            // 
-            // Paciente
-            // 
-            this.Paciente.DataPropertyName = "Nombre";
-            this.Paciente.HeaderText = "Paciente";
-            this.Paciente.Name = "Paciente";
-            this.Paciente.ReadOnly = true;
-            this.Paciente.Width = 400;
-            // 
-            // Fecha
-            // 
-            this.Fecha.DataPropertyName = "Fecha";
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 300;
-            // 
-            // Horario
-            // 
-            this.Horario.DataPropertyName = "Horario";
-            this.Horario.HeaderText = "Horario";
-            this.Horario.Name = "Horario";
-            this.Horario.ReadOnly = true;
-            this.Horario.Width = 300;
             // 
             // frmAgendarCita
             // 

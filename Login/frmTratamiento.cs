@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Nutriologa_Negocio;
 using Nutriologa_Global;
+using Nutriologa_Negocio;
+using System.Drawing.Drawing2D;
 
 namespace Login
 {
-    public partial class frmAgendarCita : Form
+    public partial class frmTratamiento : Form
     {
-        private Cita_Negocio Model { get; set; }
-        public static Cita BuscarCita = new Cita();
-        public frmAgendarCita()
+        private Tratamiento_Negocio Model { get; set; }
+        public static Tratamiento BuscarCita = new Tratamiento();
+        public frmTratamiento()
         {
             InitializeComponent();
             //redondear(btnEliminar);
@@ -25,48 +25,11 @@ namespace Login
             redondear(btnConsultarCita);
             redondear(btnEliminarCita);
             redondear(pnlGrid);
-            Model = new Cita_Negocio(Comun.Conexion);
+            Model = new Tratamiento_Negocio(Comun.Conexion);
             llenarForm();
 
         }
-        //public frmAgendarCita(Cita cita)
-        //{
-        //    InitializeComponent();
-        //    //redondear(btnEliminar);
-        //    redondear(btnNuevaCita);
-        //    redondear(btnConsultarCita);
-        //    redondear(btnEliminarCita);
-        //    redondear(pnlGrid);
-        //    Model = new Cita_Negocio(Comun.Conexion);
-        //    this.BuscarCita = cita;
-        //    recargar();
-        //}
-        public void llenarForm()
-        {
-            try
-            {
-                Model.LlenarListaCita();
-                dgvPaciente.AutoGenerateColumns = false;
-                dgvPaciente.DataSource = Model.ListaCita;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public void recargar()
-        {
-            try
-            {
-                Model.LlenarListaCitaBusqueda(BuscarCita);
-                dgvPaciente.AutoGenerateColumns = false;
-                dgvPaciente.DataSource = Model.ListaCita;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        #region diseño
         public void redondear(Button btn)
         {
             Rectangle r = new Rectangle(0, 0, btn.Width, btn.Height);
@@ -100,21 +63,84 @@ namespace Login
             gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
             btn.Region = new Region(gp);
         }
-
-        private void btn2_Click(object sender, EventArgs e)
+#endregion
+        public void llenarForm()
         {
-            frmCrearCita cita = new frmCrearCita();
-            cita.ShowDialog();
-            cita.Dispose();
-            this.llenarForm();
+            try
+            {
+                Model.LlenarListaTratamiento();
+                dgvPaciente.AutoGenerateColumns = false;
+                dgvPaciente.DataSource = Model.ListaTratamiento;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void btnNuevaCita_Click(object sender, EventArgs e)
+        {
+            frmNuevoTratamiento t = new frmNuevoTratamiento();
+            t.ShowDialog();
+            t.Dispose();
+            llenarForm();
         }
 
         private void btnConsultarCita_Click(object sender, EventArgs e)
         {
-            frmConsultarCita cita = new frmConsultarCita();
-            cita.ShowDialog();
-            cita.Dispose();
-            this.recargar();
+            Tratamiento t = new Tratamiento();
+            t = ObtenerDatos();
+            frmNuevoTratamiento liberar = new frmNuevoTratamiento(t);
+            liberar.ShowDialog();
+            liberar.Dispose();
+            llenarForm();
+        }
+
+        private Tratamiento ObtenerDatos()
+        {
+            try
+            {
+                Tratamiento tratamiento = new Tratamiento();
+                foreach (DataGridViewRow row in this.ObtenerFilaSeleccionada())
+                {
+                    tratamiento.IDTratamiento = Convert.ToInt32(row.Cells["IDTratamiento"].Value.ToString());
+                    tratamiento.Nombre = row.Cells["Nombre"].Value.ToString();
+                }
+                return tratamiento;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        private List<DataGridViewRow> ObtenerFilaSeleccionada()
+        {
+            try
+            {
+                List<DataGridViewRow> rowSelected = new List<DataGridViewRow>();
+                foreach (DataGridViewRow row in dgvPaciente.Rows)
+                {
+                    if (row.Selected)
+                    {
+                        rowSelected.Add(row);
+                    }
+                }
+                return rowSelected;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void btnEliminarCita_Click(object sender, EventArgs e)
+        {
+            Tratamiento t = new Tratamiento();
+            t = ObtenerDatos();
+            frmEliminarPaciente liberar = new frmEliminarPaciente(t);
+            liberar.ShowDialog();
+            liberar.Dispose();
+            llenarForm();
         }
     }
 }

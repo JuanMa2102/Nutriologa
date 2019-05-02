@@ -118,7 +118,7 @@
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(180, 48);
             this.btnConsultar.TabIndex = 0;
-            this.btnConsultar.Text = "Consultar Cita";
+            this.btnConsultar.Text = "Tratamientos";
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 

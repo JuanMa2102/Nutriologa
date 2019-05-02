@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class frmAgendarCita
+    partial class frmTratamiento
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPaciente = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlGrid = new System.Windows.Forms.Panel();
+            this.IDTratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminarCita = new System.Windows.Forms.Button();
             this.btnConsultarCita = new System.Windows.Forms.Button();
             this.btnNuevaCita = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.IDCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,38 +49,37 @@
             // 
             // dgvPaciente
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 10.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPaciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Black", 10.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPaciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDCita,
-            this.Paciente,
-            this.Fecha,
-            this.Horario});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPaciente.DefaultCellStyle = dataGridViewCellStyle2;
+            this.IDTratamiento,
+            this.Nombre,
+            this.Descripcion});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPaciente.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPaciente.Location = new System.Drawing.Point(18, 22);
             this.dgvPaciente.Name = "dgvPaciente";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPaciente.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPaciente.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPaciente.RowHeadersVisible = false;
             this.dgvPaciente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPaciente.Size = new System.Drawing.Size(973, 487);
@@ -95,9 +93,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
             this.label1.Location = new System.Drawing.Point(54, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 29);
+            this.label1.Size = new System.Drawing.Size(184, 29);
             this.label1.TabIndex = 9;
-            this.label1.Text = "AGENDAR CITA";
+            this.label1.Text = "TRATAMIENTO";
             // 
             // pnlGrid
             // 
@@ -107,6 +105,31 @@
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.Size = new System.Drawing.Size(1008, 529);
             this.pnlGrid.TabIndex = 14;
+            // 
+            // IDTratamiento
+            // 
+            this.IDTratamiento.DataPropertyName = "IDTratamiento";
+            this.IDTratamiento.HeaderText = "IDTratamiento";
+            this.IDTratamiento.Name = "IDTratamiento";
+            this.IDTratamiento.ReadOnly = true;
+            this.IDTratamiento.Visible = false;
+            this.IDTratamiento.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 300;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 400;
             // 
             // btnEliminarCita
             // 
@@ -118,13 +141,15 @@
             this.btnEliminarCita.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnEliminarCita.ForeColor = System.Drawing.Color.White;
             this.btnEliminarCita.Image = global::Login.Properties.Resources.ico_10;
+            this.btnEliminarCita.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminarCita.Location = new System.Drawing.Point(32, 374);
             this.btnEliminarCita.Name = "btnEliminarCita";
             this.btnEliminarCita.Size = new System.Drawing.Size(147, 112);
             this.btnEliminarCita.TabIndex = 12;
-            this.btnEliminarCita.Text = "ELIMINAR CITA";
+            this.btnEliminarCita.Text = "ELIMINAR TRATAMIENTO";
             this.btnEliminarCita.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnEliminarCita.UseVisualStyleBackColor = false;
+            this.btnEliminarCita.Click += new System.EventHandler(this.btnEliminarCita_Click);
             // 
             // btnConsultarCita
             // 
@@ -136,11 +161,12 @@
             this.btnConsultarCita.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnConsultarCita.ForeColor = System.Drawing.Color.White;
             this.btnConsultarCita.Image = global::Login.Properties.Resources.ico_10;
+            this.btnConsultarCita.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConsultarCita.Location = new System.Drawing.Point(32, 241);
             this.btnConsultarCita.Name = "btnConsultarCita";
             this.btnConsultarCita.Size = new System.Drawing.Size(147, 112);
             this.btnConsultarCita.TabIndex = 11;
-            this.btnConsultarCita.Text = "CONSULTAR CITA";
+            this.btnConsultarCita.Text = "MODIFCAR TRATAMIENTO";
             this.btnConsultarCita.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnConsultarCita.UseVisualStyleBackColor = false;
             this.btnConsultarCita.Click += new System.EventHandler(this.btnConsultarCita_Click);
@@ -155,14 +181,15 @@
             this.btnNuevaCita.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnNuevaCita.ForeColor = System.Drawing.Color.White;
             this.btnNuevaCita.Image = global::Login.Properties.Resources.ico_10;
+            this.btnNuevaCita.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevaCita.Location = new System.Drawing.Point(32, 109);
             this.btnNuevaCita.Name = "btnNuevaCita";
             this.btnNuevaCita.Size = new System.Drawing.Size(147, 112);
             this.btnNuevaCita.TabIndex = 10;
-            this.btnNuevaCita.Text = "NUEVA CITA";
+            this.btnNuevaCita.Text = "NUEVO TRATAMIENTO";
             this.btnNuevaCita.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNuevaCita.UseVisualStyleBackColor = false;
-            this.btnNuevaCita.Click += new System.EventHandler(this.btn2_Click);
+            this.btnNuevaCita.Click += new System.EventHandler(this.btnNuevaCita_Click);
             // 
             // btnAtras
             // 
@@ -190,40 +217,7 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // IDCita
-            // 
-            this.IDCita.DataPropertyName = "IDCita";
-            this.IDCita.HeaderText = "IDCita";
-            this.IDCita.Name = "IDCita";
-            this.IDCita.ReadOnly = true;
-            this.IDCita.Visible = false;
-            this.IDCita.Width = 150;
-            // 
-            // Paciente
-            // 
-            this.Paciente.DataPropertyName = "Nombre";
-            this.Paciente.HeaderText = "Paciente";
-            this.Paciente.Name = "Paciente";
-            this.Paciente.ReadOnly = true;
-            this.Paciente.Width = 400;
-            // 
-            // Fecha
-            // 
-            this.Fecha.DataPropertyName = "Fecha";
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 300;
-            // 
-            // Horario
-            // 
-            this.Horario.DataPropertyName = "Horario";
-            this.Horario.HeaderText = "Horario";
-            this.Horario.Name = "Horario";
-            this.Horario.ReadOnly = true;
-            this.Horario.Width = 300;
-            // 
-            // frmAgendarCita
+            // frmTratamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -238,7 +232,7 @@
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "frmAgendarCita";
+            this.Name = "frmTratamiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).EndInit();
@@ -258,9 +252,8 @@
         private System.Windows.Forms.Button btnEliminarCita;
         private System.Windows.Forms.Panel pnlGrid;
         private System.Windows.Forms.DataGridView dgvPaciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDCita;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Paciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Horario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDTratamiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }

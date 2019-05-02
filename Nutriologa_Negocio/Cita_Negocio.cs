@@ -94,5 +94,11 @@ namespace Nutriologa_Negocio
                 throw ex;
             }
         }
+
+        public void EliminarTratamiento(Cita c)
+        {
+            Cita_Datos pd = new Cita_Datos();
+            pd.EliminarPaciente(c);
+        }
     }
 }

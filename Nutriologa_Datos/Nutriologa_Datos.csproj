@@ -48,6 +48,7 @@
     <Compile Include="Login_Datos.cs" />
     <Compile Include="Paciente_Datos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tratamiento_Datos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nutriologa_Global\Nutriologa_Global.csproj">

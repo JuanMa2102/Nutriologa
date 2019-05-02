@@ -116,5 +116,52 @@ namespace Login
             cita.Dispose();
             this.recargar();
         }
+
+        private void btnEliminarCita_Click(object sender, EventArgs e)
+        {
+            Cita c = new Cita();
+            c = ObtenerDatos();
+            frmEliminarPaciente cita = new frmEliminarPaciente(c);
+            cita.ShowDialog();
+            cita.Dispose();
+            llenarForm();
+        }
+
+        private Cita ObtenerDatos()
+        {
+            try
+            {
+                Cita cita = new Cita();
+                foreach (DataGridViewRow row in this.ObtenerFilaSeleccionada())
+                {
+                    cita.IDCita = Convert.ToInt32(row.Cells["IDCita"].Value.ToString());
+                    cita.Nombre = row.Cells["Paciente"].Value.ToString();
+                }
+                return cita;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        private List<DataGridViewRow> ObtenerFilaSeleccionada()
+        {
+            try
+            {
+                List<DataGridViewRow> rowSelected = new List<DataGridViewRow>();
+                foreach (DataGridViewRow row in dgvPaciente.Rows)
+                {
+                    if (row.Selected)
+                    {
+                        rowSelected.Add(row);
+                    }
+                }
+                return rowSelected;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

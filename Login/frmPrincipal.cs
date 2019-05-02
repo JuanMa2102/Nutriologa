@@ -91,20 +91,15 @@ namespace Login
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            frmConsultarCita fl = new frmConsultarCita();
-            this.Visible = false;
+            frmTratamiento fl = new frmTratamiento();
             fl.ShowDialog();
             fl.Dispose();
-            if (fl.salir)
-            {
-                this.Visible = true;
-            }
+            
         }
 
         private void btnCita_Click(object sender, EventArgs e)
         {
             frmAgendarCita cita = new frmAgendarCita();
-
             cita.ShowDialog();
             cita.Dispose();
         }

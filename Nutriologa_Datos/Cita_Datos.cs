@@ -105,6 +105,21 @@ namespace Nutriologa_Datos
             }
         }
 
+        public void EliminarPaciente(Cita c)
+        {
+            try
+            {
+
+                object[] Parametros = { c.IDCita };
+                object Result = SqlHelper.ExecuteScalar(ConfigurationManager.AppSettings.Get("strConnection"), "dbo.sp_EliminarCita", Parametros);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public List<Cita> ObtenerCitasBusqueda(string Conexion, Cita cita)
         {
             try
