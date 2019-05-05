@@ -51,7 +51,6 @@
             this.txtColesterol = new System.Windows.Forms.TextBox();
             this.txtAcido = new System.Windows.Forms.TextBox();
             this.txtTrigliserido = new System.Windows.Forms.TextBox();
-            this.btnres = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -276,23 +275,11 @@
             this.txtTrigliserido.TabIndex = 31;
             this.txtTrigliserido.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
-            // btnres
-            // 
-            this.btnres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
-            this.btnres.Image = global::Login.Properties.Resources.ico_7;
-            this.btnres.Location = new System.Drawing.Point(587, 521);
-            this.btnres.Name = "btnres";
-            this.btnres.Size = new System.Drawing.Size(99, 91);
-            this.btnres.TabIndex = 9;
-            this.btnres.Text = "Restablecer";
-            this.btnres.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnres.UseVisualStyleBackColor = false;
-            // 
             // btnsave
             // 
             this.btnsave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.btnsave.Image = global::Login.Properties.Resources.ico_6_style2;
-            this.btnsave.Location = new System.Drawing.Point(458, 521);
+            this.btnsave.Location = new System.Drawing.Point(480, 521);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(100, 91);
             this.btnsave.TabIndex = 8;
@@ -367,7 +354,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnres);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnAtras);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -385,7 +371,6 @@
         #endregion
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnsave;
-        private System.Windows.Forms.Button btnres;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
