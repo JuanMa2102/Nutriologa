@@ -210,6 +210,7 @@
             this.btnAtras.Size = new System.Drawing.Size(136, 46);
             this.btnAtras.TabIndex = 7;
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // pictureBox1
             // 

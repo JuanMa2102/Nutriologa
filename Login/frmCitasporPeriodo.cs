@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class frmReportes : Form
+    public partial class frmCitasporPeriodo : Form
     {
-        public frmReportes()
+        public frmCitasporPeriodo()
         {
             InitializeComponent();
-        }
-
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

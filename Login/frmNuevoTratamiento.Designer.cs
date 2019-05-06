@@ -33,9 +33,7 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.Titulo = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -43,11 +41,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(96, 162);
+            this.label2.Location = new System.Drawing.Point(96, 176);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 18);
+            this.label2.Size = new System.Drawing.Size(111, 18);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Descripcion";
+            this.label2.Text = "DESCRIPCION";
             // 
             // label1
             // 
@@ -85,29 +83,20 @@
             this.Titulo.TabIndex = 16;
             this.Titulo.Text = "AGREGAR TRATAMIENTO";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(427, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
-            this.btnGuardar.Image = global::Login.Properties.Resources.ico_10;
+            this.btnGuardar.Image = global::Login.Properties.Resources.ico_5_style2;
             this.btnGuardar.Location = new System.Drawing.Point(166, 258);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(119, 83);
+            this.btnGuardar.Size = new System.Drawing.Size(127, 81);
             this.btnGuardar.TabIndex = 14;
-            this.btnGuardar.Text = "CONSULTAR";
+            this.btnGuardar.Text = "AGREGAR";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // NuevoTratamiento
+            // frmNuevoTratamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,17 +104,15 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(455, 363);
             this.Controls.Add(this.Titulo);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NuevoTratamiento";
+            this.Name = "frmNuevoTratamiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,7 +125,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Titulo;
     }
 }
