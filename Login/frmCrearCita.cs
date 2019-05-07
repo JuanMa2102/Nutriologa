@@ -22,7 +22,6 @@ namespace Login
             InitializeComponent();
             redondear(btnGuardar);
             redondear(btnrestablecer);
-            redondear();
             Model = new Cita_Negocio(Comun.Conexion);
             llenarCombo();
         }

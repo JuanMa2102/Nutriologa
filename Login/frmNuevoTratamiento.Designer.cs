@@ -89,7 +89,7 @@
             this.btnGuardar.Image = global::Login.Properties.Resources.ico_5_style2;
             this.btnGuardar.Location = new System.Drawing.Point(166, 258);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(127, 81);
+            this.btnGuardar.Size = new System.Drawing.Size(132, 93);
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "AGREGAR";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -109,7 +109,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNuevoTratamiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

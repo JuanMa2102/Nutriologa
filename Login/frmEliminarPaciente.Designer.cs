@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEliminarPaciente));
             this.label1 = new System.Windows.Forms.Label();
             this.btnSI = new System.Windows.Forms.Button();
             this.btnNO = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -41,7 +38,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(54, 77);
+            this.label1.Location = new System.Drawing.Point(84, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 19);
             this.label1.TabIndex = 0;
@@ -77,17 +74,6 @@
             this.btnNO.UseVisualStyleBackColor = false;
             this.btnNO.Click += new System.EventHandler(this.btnNO_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(472, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // frmEliminarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,15 +81,13 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
             this.ClientSize = new System.Drawing.Size(497, 228);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnNO);
             this.Controls.Add(this.btnSI);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmEliminarPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,6 +98,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSI;
         private System.Windows.Forms.Button btnNO;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

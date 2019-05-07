@@ -20,7 +20,6 @@ namespace Login
         public frmLiberarPaciente(Paciente paciente)
         {
             InitializeComponent();
-            redondear();
             redondear(btnSI);
             redondear(btnNO);
             this.paciente = paciente;

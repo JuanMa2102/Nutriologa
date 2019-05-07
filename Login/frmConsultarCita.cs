@@ -22,7 +22,6 @@ namespace Login
         public frmConsultarCita()
         {
             InitializeComponent();
-            redondear();
             redondear(btnAgendar);
             Model = new Cita_Negocio(Comun.Conexion);
         }
