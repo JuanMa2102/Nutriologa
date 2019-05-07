@@ -96,5 +96,29 @@ namespace Nutriologa_Datos
                 throw ex;
             }
         }
+        public List<Tratamiento> ReportePacientesActivos()
+        {
+            try
+            {
+                String Conexion = ConfigurationManager.AppSettings.Get("strConnection");
+                List <Tratamiento> Lista = new List<Tratamiento>();
+                Tratamiento Item;
+                SqlDataReader Dr = SqlHelper.ExecuteReader(Conexion, CommandType.StoredProcedure, "dbo.sp_ReportePacientesActivos");
+                while (Dr.Read())
+                {
+                    Item = new Tratamiento();
+                    Item.Nombre = !Dr.IsDBNull(Dr.GetOrdinal("Nombre")) ? Dr.GetString(Dr.GetOrdinal("Nombre")) : string.Empty;
+                    Item.tratamiento = !Dr.IsDBNull(Dr.GetOrdinal("Tratamiento")) ? Dr.GetString(Dr.GetOrdinal("Tratamiento")) : string.Empty;
+                    Lista.Add(Item);
+
+                }
+                Dr.Close();
+                return Lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

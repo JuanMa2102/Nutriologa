@@ -40,5 +40,18 @@ namespace Login
             rpl.ShowDialog();
             rpl.Dispose();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPacientesActivos pa = new frmPacientesActivos();
+            this.Visible = false;
+            pa.ShowDialog();
+            pa.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

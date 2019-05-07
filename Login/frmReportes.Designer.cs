@@ -65,6 +65,7 @@
             this.button3.Text = "PACIENTES POR TRATAMEINTOS";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -104,6 +105,7 @@
             this.button1.Text = "PACIENTES ACTIVOS";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNuevaCita
             // 
