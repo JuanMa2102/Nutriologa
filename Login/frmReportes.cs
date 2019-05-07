@@ -21,5 +21,24 @@ namespace Login
         {
             this.Close();
         }
+
+        private void btnNuevaCita_Click(object sender, EventArgs e)
+        {
+            frmCitasporPeriodo fl = new frmCitasporPeriodo();
+            this.Visible = false;
+            fl.ShowDialog();
+            fl.Dispose();
+        
+        }
+
+    
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmReportesPacientesLiberados rpl = new frmReportesPacientesLiberados();
+            this.Visible = false;
+            rpl.ShowDialog();
+            rpl.Dispose();
+        }
     }
 }

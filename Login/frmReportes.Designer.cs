@@ -84,6 +84,7 @@
             this.button2.Text = "PACIENTES LIBERADOS";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -121,6 +122,7 @@
             this.btnNuevaCita.Text = "CITAS POR PERIODO";
             this.btnNuevaCita.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNuevaCita.UseVisualStyleBackColor = false;
+            this.btnNuevaCita.Click += new System.EventHandler(this.btnNuevaCita_Click);
             // 
             // frmReportes
             // 
