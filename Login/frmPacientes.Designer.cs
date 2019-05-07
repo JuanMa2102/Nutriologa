@@ -185,96 +185,118 @@
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtNombre.Location = new System.Drawing.Point(230, 137);
+            this.txtNombre.MaxLength = 40;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(207, 20);
             this.txtNombre.TabIndex = 21;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellido
             // 
             this.txtApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtApellido.Location = new System.Drawing.Point(230, 204);
+            this.txtApellido.MaxLength = 40;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(207, 20);
             this.txtApellido.TabIndex = 22;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtTelefono.Location = new System.Drawing.Point(230, 275);
+            this.txtTelefono.MaxLength = 13;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(136, 20);
             this.txtTelefono.TabIndex = 23;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtEstatura
             // 
             this.txtEstatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtEstatura.Location = new System.Drawing.Point(230, 344);
+            this.txtEstatura.MaxLength = 4;
             this.txtEstatura.Name = "txtEstatura";
             this.txtEstatura.Size = new System.Drawing.Size(136, 20);
             this.txtEstatura.TabIndex = 24;
+            this.txtEstatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstatura_KeyPress);
             // 
             // txtEdad
             // 
             this.txtEdad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtEdad.Location = new System.Drawing.Point(230, 411);
+            this.txtEdad.MaxLength = 2;
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(136, 20);
             this.txtEdad.TabIndex = 25;
             this.txtEdad.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // txtTalla
             // 
             this.txtTalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtTalla.Location = new System.Drawing.Point(230, 486);
+            this.txtTalla.MaxLength = 5;
             this.txtTalla.Name = "txtTalla";
             this.txtTalla.Size = new System.Drawing.Size(136, 20);
             this.txtTalla.TabIndex = 26;
             this.txtTalla.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.txtTalla.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTalla_KeyPress);
             // 
             // txtPeso
             // 
             this.txtPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtPeso.Location = new System.Drawing.Point(630, 137);
+            this.txtPeso.MaxLength = 6;
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(138, 20);
             this.txtPeso.TabIndex = 27;
             this.txtPeso.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txtPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeso_KeyPress);
             // 
             // txtGrasa
             // 
             this.txtGrasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtGrasa.Location = new System.Drawing.Point(630, 204);
+            this.txtGrasa.MaxLength = 6;
             this.txtGrasa.Name = "txtGrasa";
             this.txtGrasa.Size = new System.Drawing.Size(138, 20);
             this.txtGrasa.TabIndex = 28;
             this.txtGrasa.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.txtGrasa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGrasa_KeyPress);
             // 
             // txtColesterol
             // 
             this.txtColesterol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtColesterol.Location = new System.Drawing.Point(630, 275);
+            this.txtColesterol.MaxLength = 6;
             this.txtColesterol.Name = "txtColesterol";
             this.txtColesterol.Size = new System.Drawing.Size(138, 20);
             this.txtColesterol.TabIndex = 29;
             this.txtColesterol.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.txtColesterol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtColesterol_KeyPress);
             // 
             // txtAcido
             // 
             this.txtAcido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtAcido.Location = new System.Drawing.Point(630, 344);
+            this.txtAcido.MaxLength = 6;
             this.txtAcido.Name = "txtAcido";
             this.txtAcido.Size = new System.Drawing.Size(138, 20);
             this.txtAcido.TabIndex = 30;
             this.txtAcido.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.txtAcido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcido_KeyPress);
             // 
             // txtTrigliserido
             // 
             this.txtTrigliserido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(160)))), ((int)(((byte)(172)))));
             this.txtTrigliserido.Location = new System.Drawing.Point(630, 411);
+            this.txtTrigliserido.MaxLength = 6;
             this.txtTrigliserido.Name = "txtTrigliserido";
             this.txtTrigliserido.Size = new System.Drawing.Size(138, 20);
             this.txtTrigliserido.TabIndex = 31;
             this.txtTrigliserido.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            this.txtTrigliserido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTrigliserido_KeyPress);
             // 
             // btnres
             // 

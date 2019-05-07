@@ -4,11 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login
+namespace ExprecionesRegulares
 {
-    /// <summary>
-    /// 
-    /// </summary>
     static class Program
     {
         /// <summary>
@@ -19,9 +16,7 @@ namespace Login
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmAgendarPaciente());
-            Application.Run(new frmPacientes());
-            //Application.Run(new frmCrearCita());
+            Application.Run(new Form1());
         }
     }
 }
