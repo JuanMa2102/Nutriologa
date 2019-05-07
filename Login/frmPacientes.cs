@@ -26,7 +26,6 @@ namespace Login
             InitializeComponent();
             redondear(btnsave);
             redondear(btnAtras);
-            redondear(btnres);
             redondear();
             Model = new Paciente_Negocio(Comun.Conexion);
         }
@@ -38,7 +37,6 @@ namespace Login
             EsModificar = true;
             redondear(btnsave);
             redondear(btnAtras);
-            redondear(btnres);
             redondear();
             Model = new Paciente_Negocio(Comun.Conexion);
             llenar();

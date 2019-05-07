@@ -83,5 +83,10 @@ namespace Login
             Model.LiberarPaciente(paciente);
             this.Close();
         }
+
+        private void btnNO_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

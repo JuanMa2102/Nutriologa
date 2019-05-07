@@ -75,6 +75,7 @@
             this.btnNO.TabIndex = 2;
             this.btnNO.Text = "NO";
             this.btnNO.UseVisualStyleBackColor = false;
+            this.btnNO.Click += new System.EventHandler(this.btnNO_Click);
             // 
             // pictureBox2
             // 

@@ -16,6 +16,8 @@ namespace Nutriologa_Global
         public string Numero { get; set; }
         public int IDNombre { get; set; }
         public int IDHorario { get; set; }
+        public DateTime Fechain { get; set; }
+        public DateTime Fechafi { get; set; }
 
     }
 }

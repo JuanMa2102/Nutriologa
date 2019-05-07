@@ -113,6 +113,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ico_1 {
+            get {
+                object obj = ResourceManager.GetObject("ico-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ico_1_style2 {
             get {
                 object obj = ResourceManager.GetObject("ico_1_style2", resourceCulture);
@@ -153,9 +163,39 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ico_1_style31 {
+            get {
+                object obj = ResourceManager.GetObject("ico-1-style31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_1_style32 {
+            get {
+                object obj = ResourceManager.GetObject("ico-1-style32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ico_10 {
             get {
                 object obj = ResourceManager.GetObject("ico-10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_101 {
+            get {
+                object obj = ResourceManager.GetObject("ico-101", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +236,36 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap ico_4 {
             get {
                 object obj = ResourceManager.GetObject("ico-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_4_style3 {
+            get {
+                object obj = ResourceManager.GetObject("ico-4-style3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_5_style2 {
+            get {
+                object obj = ResourceManager.GetObject("ico-5-style2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_5_style3 {
+            get {
+                object obj = ResourceManager.GetObject("ico-5-style3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

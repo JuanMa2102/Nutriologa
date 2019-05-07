@@ -81,11 +81,11 @@
             this.Titulo.AutoSize = true;
             this.Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo.ForeColor = System.Drawing.Color.White;
-            this.Titulo.Location = new System.Drawing.Point(126, 28);
+            this.Titulo.Location = new System.Drawing.Point(93, 36);
             this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(201, 31);
+            this.Titulo.Size = new System.Drawing.Size(267, 31);
             this.Titulo.TabIndex = 16;
-            this.Titulo.Text = "Consultar Cita";
+            this.Titulo.Text = "CONSULTAR CITA";
             // 
             // pictureBox2
             // 

@@ -142,5 +142,10 @@ namespace Login
             liberar.Dispose();
             llenarForm();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

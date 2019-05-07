@@ -22,10 +22,8 @@ namespace Login
             redondear(btnCita);
             redondear(btnCerrar);
             redondear(btnConsultar);
-            redondear(btnLiberar);
-            redondear(btnGenerar);
+            redondear(btnReportes);
             // redondear(pictureBox1);
-            redondear(btnAtras);
             redondear(imageUsuario);
         }
 
@@ -113,6 +111,13 @@ namespace Login
             {
                 this.Visible = true;
             }
+        }
+
+        private void btnLiberar_Click(object sender, EventArgs e)
+        {
+            frmReportes fl = new frmReportes();
+            fl.ShowDialog();
+            fl.Dispose();
         }
     }
 }

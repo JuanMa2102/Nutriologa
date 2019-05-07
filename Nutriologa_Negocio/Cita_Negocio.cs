@@ -19,6 +19,7 @@ namespace Nutriologa_Negocio
         public BindingList<Cita> ListaCita { get; set; }
         public BindingList<Cita> ListaHorario { get; set; }
         public BindingList<Cita> ListaPaciente { get; set; }
+        public BindingList<Cita> ListaReportePeriodo { get; set; }
 
         public Cita_Negocio(string _Conexion)
         {
@@ -26,6 +27,7 @@ namespace Nutriologa_Negocio
             ListaCita = new BindingList<Cita>(new List<Cita>());
             ListaPaciente = new BindingList<Cita>(new List<Cita>());
             ListaHorario = new BindingList<Cita>(new List<Cita>());
+            ListaReportePeriodo = new BindingList<Cita>(new List<Cita>());
             LlenarListaCita();
             LlenarListaPaciente();
             LLenarListaHorario();
@@ -99,6 +101,24 @@ namespace Nutriologa_Negocio
         {
             Cita_Datos pd = new Cita_Datos();
             pd.EliminarPaciente(c);
+        }
+        public void LlenarListaReporteCitaPeriodo(Cita cita)
+        {
+            try
+            {
+                ListaReportePeriodo.Clear();
+                Cita_Datos RegionDatos = new Cita_Datos();
+                List<Cita> ListaAux = RegionDatos.ReporteCitasPeriodo(cita);
+                foreach (var Item in ListaAux)
+                {
+                    ListaReportePeriodo.Add(Item);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
