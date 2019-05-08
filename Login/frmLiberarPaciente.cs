@@ -8,17 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nutriologa_Global;
+using Nutriologa_Negocio;
 
 namespace Login
 {
     public partial class frmLiberarPaciente : Form
     {
-        public frmLiberarPaciente()
+        Paciente paciente = new Paciente();
+        private Paciente_Negocio Model { get; set; }
+        public frmLiberarPaciente(Paciente paciente)
         {
             InitializeComponent();
             redondear();
             redondear(btnSI);
             redondear(btnNO);
+            this.paciente = paciente;
+            label1.Text = "¿ Estas seguro de liberar al paciente " + paciente.Nombre +"?";
+            Model = new Paciente_Negocio(Comun.Conexion);
         }
         public void redondear(Button btn)
         {
@@ -69,6 +76,17 @@ namespace Login
             {
 
             }
+        }
+
+        private void btnSI_Click(object sender, EventArgs e)
+        {
+            Model.LiberarPaciente(paciente);
+            this.Close();
+        }
+
+        private void btnNO_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

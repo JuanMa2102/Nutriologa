@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarCita));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Campo2 = new System.Windows.Forms.TextBox();
-            this.campo1 = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.Titulo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAgendar = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -61,31 +63,31 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "NOMBRE";
             // 
-            // Campo2
+            // txtApellido
             // 
-            this.Campo2.Location = new System.Drawing.Point(99, 206);
-            this.Campo2.Name = "Campo2";
-            this.Campo2.Size = new System.Drawing.Size(245, 20);
-            this.Campo2.TabIndex = 11;
+            this.txtApellido.Location = new System.Drawing.Point(99, 206);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(245, 20);
+            this.txtApellido.TabIndex = 11;
             // 
-            // campo1
+            // txtNombre
             // 
-            this.campo1.Location = new System.Drawing.Point(99, 120);
-            this.campo1.Name = "campo1";
-            this.campo1.Size = new System.Drawing.Size(245, 20);
-            this.campo1.TabIndex = 10;
-            this.campo1.TextChanged += new System.EventHandler(this.campo1_TextChanged);
+            this.txtNombre.Location = new System.Drawing.Point(99, 120);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(245, 20);
+            this.txtNombre.TabIndex = 10;
+            this.txtNombre.TextChanged += new System.EventHandler(this.campo1_TextChanged);
             // 
             // Titulo
             // 
             this.Titulo.AutoSize = true;
             this.Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo.ForeColor = System.Drawing.Color.White;
-            this.Titulo.Location = new System.Drawing.Point(126, 28);
+            this.Titulo.Location = new System.Drawing.Point(93, 36);
             this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(201, 31);
+            this.Titulo.Size = new System.Drawing.Size(267, 31);
             this.Titulo.TabIndex = 16;
-            this.Titulo.Text = "Consultar Cita";
+            this.Titulo.Text = "CONSULTAR CITA";
             // 
             // pictureBox2
             // 
@@ -109,6 +111,18 @@
             this.btnAgendar.Text = "CONSULTAR";
             this.btnAgendar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAgendar.UseVisualStyleBackColor = false;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(398, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 18;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // frmConsultarCita
             // 
@@ -117,19 +131,21 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(455, 363);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.Titulo);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnAgendar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Campo2);
-            this.Controls.Add(this.campo1);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConsultarCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmModificarCita_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,9 +156,10 @@
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Campo2;
-        private System.Windows.Forms.TextBox campo1;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Titulo;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

@@ -40,10 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login_Negocio.cs" />
     <Compile Include="Cita_Negocio.cs" />
+    <Compile Include="Login_Negocio.cs" />
     <Compile Include="Paciente_Negocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tratamiento_Negocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

@@ -22,10 +22,8 @@ namespace Login
             redondear(btnCita);
             redondear(btnCerrar);
             redondear(btnConsultar);
-            redondear(btnLiberar);
-            redondear(btnGenerar);
+            redondear(btnReportes);
             // redondear(pictureBox1);
-            redondear(btnAtras);
             redondear(imageUsuario);
         }
 
@@ -71,7 +69,9 @@ namespace Login
 
         private void btnPaciente_Click(object sender, EventArgs e)
         {
-            
+            frmAgendarPaciente paciente = new frmAgendarPaciente();
+            paciente.ShowDialog();
+            paciente.Dispose();
         }
 
         private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
@@ -89,16 +89,18 @@ namespace Login
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            frmConsultarCita fl = new frmConsultarCita();
-            this.Visible = false;
+            frmTratamiento fl = new frmTratamiento();
             fl.ShowDialog();
             fl.Dispose();
-            if (fl.salir)
-            {
-                this.Visible = true;
-            }
+            
         }
 
+        private void btnCita_Click(object sender, EventArgs e)
+        {
+            frmAgendarCita cita = new frmAgendarCita();
+            cita.ShowDialog();
+            cita.Dispose();
+        }
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             frmPacientes fl = new frmPacientes();
@@ -109,6 +111,13 @@ namespace Login
             {
                 this.Visible = true;
             }
+        }
+
+        private void btnLiberar_Click(object sender, EventArgs e)
+        {
+            frmReportes fl = new frmReportes();
+            fl.ShowDialog();
+            fl.Dispose();
         }
     }
 }
