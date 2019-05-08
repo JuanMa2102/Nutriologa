@@ -30,7 +30,6 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.dgvLiberado = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,21 +63,6 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "PACIENTES LIBERADOS";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Login.Properties.Resources.ico_1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(36, 294);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 80);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "GENERAR REPORTE";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // dgvLiberado
             // 
             this.dgvLiberado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -86,9 +70,9 @@
             this.Nombre,
             this.Tratamiento,
             this.Telefono});
-            this.dgvLiberado.Location = new System.Drawing.Point(288, 119);
+            this.dgvLiberado.Location = new System.Drawing.Point(36, 119);
             this.dgvLiberado.Name = "dgvLiberado";
-            this.dgvLiberado.Size = new System.Drawing.Size(543, 488);
+            this.dgvLiberado.Size = new System.Drawing.Size(795, 488);
             this.dgvLiberado.TabIndex = 21;
             // 
             // Nombre
@@ -118,7 +102,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 630);
             this.Controls.Add(this.dgvLiberado);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmReportesPacientesLiberados";
@@ -134,7 +117,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvLiberado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tratamiento;

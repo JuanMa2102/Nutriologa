@@ -64,20 +64,7 @@ namespace Login
 
         private void txtPass_Enter(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtPass.Text == "CONTRASEÑA")
-                {
-                    txtPass.Text = "";
-                    txtPass.ForeColor = Color.LightGray;
-                    txtPass.UseSystemPasswordChar = true;
-                }
-                
-            }
-            catch (Exception ex)
-            {
-
-            }
+           
         }
 
         private void txtUser_Leave(object sender, EventArgs e)
@@ -87,7 +74,6 @@ namespace Login
                 if (txtUser.Text == "")
                 {
                     txtUser.Text = "USUARIO";
-                    txtUser.ForeColor = Color.DimGray;
                 }
             }
             catch (Exception ex)
@@ -98,19 +84,7 @@ namespace Login
 
         private void txtPass_Leave(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtPass.Text == "")
-                {
-                    txtPass.UseSystemPasswordChar = false;
-                    txtPass.Text = "CONTRASEÑA";
-                    txtPass.ForeColor = Color.DimGray;
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
+            
         }
 
         public void login()
@@ -221,6 +195,39 @@ namespace Login
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPass_Enter_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtPass.Text == "CONTRASEÑA")
+                {
+                    txtPass.Text = "";
+                    txtPass.UseSystemPasswordChar = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void txtPass_Leave_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtPass.Text == "")
+                {
+                    txtPass.UseSystemPasswordChar = false;
+                    txtPass.Text = "CONTRASEÑA";
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

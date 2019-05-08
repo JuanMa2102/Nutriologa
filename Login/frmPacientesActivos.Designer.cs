@@ -34,7 +34,6 @@
             this.IDCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportePeriodo)).BeginInit();
             this.SuspendLayout();
@@ -71,9 +70,9 @@
             this.IDCita,
             this.Nombre,
             this.Tratamiento});
-            this.dgvReportePeriodo.Location = new System.Drawing.Point(288, 119);
+            this.dgvReportePeriodo.Location = new System.Drawing.Point(24, 119);
             this.dgvReportePeriodo.Name = "dgvReportePeriodo";
-            this.dgvReportePeriodo.Size = new System.Drawing.Size(542, 488);
+            this.dgvReportePeriodo.Size = new System.Drawing.Size(806, 488);
             this.dgvReportePeriodo.TabIndex = 15;
             this.dgvReportePeriodo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReportePeriodo_CellContentClick);
             // 
@@ -98,27 +97,11 @@
             this.Tratamiento.Name = "Tratamiento";
             this.Tratamiento.Width = 300;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Login.Properties.Resources.ico_1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(73, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 80);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "GENERAR REPORTE";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmPacientesActivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 630);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvReportePeriodo);
@@ -137,7 +120,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvReportePeriodo;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tratamiento;

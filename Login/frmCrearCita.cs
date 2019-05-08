@@ -86,7 +86,7 @@ namespace Login
         {
             try
             {
-                if (dtmFecha.Value.Date < DateTime.Now.Date)
+                if (dtmFecha.Value.Date > DateTime.Now.Date)
                 {
                     int verificar = 1;
                     Cita c = new Cita();
@@ -103,6 +103,7 @@ namespace Login
                         this.Close();
                     }
                 }
+                else
                 MessageBox.Show("Selecciones una fecha valida", "Sistema Nutriologa DS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)

@@ -196,6 +196,8 @@
             this.txtPass.TabIndex = 13;
             this.txtPass.Text = "CONTRASEÑA";
             this.txtPass.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter_1);
+            this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave_1);
             // 
             // frmLogin
             // 
