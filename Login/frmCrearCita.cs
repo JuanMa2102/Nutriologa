@@ -21,7 +21,6 @@ namespace Login
         {
             InitializeComponent();
             redondear(btnGuardar);
-            redondear(btnrestablecer);
             redondear();
             Model = new Cita_Negocio(Comun.Conexion);
             llenarCombo();
@@ -106,6 +105,26 @@ namespace Login
             {
                 throw ex;
             }
+        }
+
+        private void txtNom_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtNum_TextChanged(object sender, EventArgs e)
+        {
+           numtel = Convert.ToInt32(txtNum.Text);
+        }
+
+        private void txtFecha_TextChanged(object sender, EventArgs e)
+        {
+          fecha = Convert.ToInt32(txtFecha.Text);
+        }
+
+        private void txtHorario_TextChanged(object sender, EventArgs e)
+        {
+            horario = Convert.ToInt32(txtHorario.Text);
         }
     }
 }

@@ -193,6 +193,9 @@
   <data name="ico-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico-41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ico-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="thanos_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thanos_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,7 +208,7 @@
   <data name="ico-1-style3_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico-1-style3_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ico-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ico-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ico-6-style21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico-6-style22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
