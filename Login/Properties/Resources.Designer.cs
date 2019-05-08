@@ -293,6 +293,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ico_6_style21 {
+            get {
+                object obj = ResourceManager.GetObject("ico-6-style21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ico_7 {
             get {
                 object obj = ResourceManager.GetObject("ico-7", resourceCulture);
