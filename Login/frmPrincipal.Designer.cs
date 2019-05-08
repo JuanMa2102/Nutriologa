@@ -162,10 +162,10 @@
             // 
             // imageUsuario
             // 
-            this.imageUsuario.Image = global::Login.Properties.Resources.thanos_0;
-            this.imageUsuario.Location = new System.Drawing.Point(13, 39);
+            this.imageUsuario.Image = global::Login.Properties.Resources.logo_img;
+            this.imageUsuario.Location = new System.Drawing.Point(35, 39);
             this.imageUsuario.Name = "imageUsuario";
-            this.imageUsuario.Size = new System.Drawing.Size(180, 111);
+            this.imageUsuario.Size = new System.Drawing.Size(134, 111);
             this.imageUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageUsuario.TabIndex = 7;
             this.imageUsuario.TabStop = false;
