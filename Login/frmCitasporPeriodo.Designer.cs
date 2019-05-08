@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvReportePeriodo = new System.Windows.Forms.DataGridView();
-            this.dtmFechaIn = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtmFechaFi = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.IDCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtmFechaIn = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtmFechaFi = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportePeriodo)).BeginInit();
@@ -50,7 +50,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
-            this.label1.Location = new System.Drawing.Point(35, 35);
+            this.label1.Location = new System.Drawing.Point(35, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(257, 29);
             this.label1.TabIndex = 13;
@@ -70,6 +70,32 @@
             this.dgvReportePeriodo.Size = new System.Drawing.Size(542, 488);
             this.dgvReportePeriodo.TabIndex = 14;
             this.dgvReportePeriodo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReportePeriodo_CellContentClick);
+            // 
+            // IDCita
+            // 
+            this.IDCita.DataPropertyName = "IDCita";
+            this.IDCita.HeaderText = "IDCita";
+            this.IDCita.Name = "IDCita";
+            this.IDCita.Visible = false;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 300;
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "Fecha";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Horario
+            // 
+            this.Horario.DataPropertyName = "Horario";
+            this.Horario.HeaderText = "Horario";
+            this.Horario.Name = "Horario";
             // 
             // dtmFechaIn
             // 
@@ -113,32 +139,6 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "FECHA FINAL";
             // 
-            // IDCita
-            // 
-            this.IDCita.DataPropertyName = "IDCita";
-            this.IDCita.HeaderText = "IDCita";
-            this.IDCita.Name = "IDCita";
-            this.IDCita.Visible = false;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 300;
-            // 
-            // Fecha
-            // 
-            this.Fecha.DataPropertyName = "Fecha";
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // Horario
-            // 
-            this.Horario.DataPropertyName = "Horario";
-            this.Horario.HeaderText = "Horario";
-            this.Horario.Name = "Horario";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
@@ -162,7 +162,7 @@
             this.pictureBox1.InitialImage = global::Login.Properties.Resources.WhatsApp_Image_2019_04_07_at_11_22_25_PM;
             this.pictureBox1.Location = new System.Drawing.Point(21, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(850, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(850, 82);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -181,7 +181,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmCitasporPeriodo";
-            this.Text = "frmCitasporPeriodo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Citas por Periodo";
             this.Load += new System.EventHandler(this.frmCitasporPeriodo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportePeriodo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -25,6 +25,7 @@ namespace Login
             redondear(btnConsultarCita);
             redondear(btnEliminarCita);
             redondear(pnlGrid);
+            redondear(btnAtras);
             Model = new Cita_Negocio(Comun.Conexion);
             llenarForm();
 
