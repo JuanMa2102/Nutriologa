@@ -51,7 +51,10 @@ namespace Login
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            frmPacientesPorTratamiento pa = new frmPacientesPorTratamiento();
+            this.Visible = false;
+            pa.ShowDialog();
+            pa.Dispose();
         }
     }
 }
