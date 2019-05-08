@@ -103,7 +103,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(66)))), ((int)(((byte)(101)))));
-            this.label1.Location = new System.Drawing.Point(411, 35);
+            this.label1.Location = new System.Drawing.Point(360, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 29);
             this.label1.TabIndex = 9;
@@ -119,7 +119,7 @@
             this.btnCita.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCita.ForeColor = System.Drawing.Color.White;
             this.btnCita.Image = global::Login.Properties.Resources.agenda_estilo2;
-            this.btnCita.Location = new System.Drawing.Point(380, 126);
+            this.btnCita.Location = new System.Drawing.Point(365, 177);
             this.btnCita.Name = "btnCita";
             this.btnCita.Size = new System.Drawing.Size(318, 389);
             this.btnCita.TabIndex = 8;
@@ -134,9 +134,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox1.Image = global::Login.Properties.Resources.header_sistema;
             this.pictureBox1.InitialImage = global::Login.Properties.Resources.WhatsApp_Image_2019_04_07_at_11_22_25_PM;
-            this.pictureBox1.Location = new System.Drawing.Point(380, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(270, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(782, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(1018, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -151,7 +151,7 @@
             this.btnPaciente.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaciente.ForeColor = System.Drawing.Color.Transparent;
             this.btnPaciente.Image = global::Login.Properties.Resources.pacientes_estilo1;
-            this.btnPaciente.Location = new System.Drawing.Point(844, 126);
+            this.btnPaciente.Location = new System.Drawing.Point(865, 177);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Size = new System.Drawing.Size(318, 389);
             this.btnPaciente.TabIndex = 5;

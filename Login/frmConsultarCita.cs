@@ -110,5 +110,15 @@ namespace Login
             cita.Nombre = txtNombre.Text;
             cita.Apellido = txtApellido.Text;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
