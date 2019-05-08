@@ -28,6 +28,7 @@ namespace Login
             redondear(btnAtras);
             redondear();
             Model = new Paciente_Negocio(Comun.Conexion);
+            LlenarCombo();
         }
         public frmPacientes(Paciente paciente)
         {
@@ -39,7 +40,15 @@ namespace Login
             redondear(btnAtras);
             redondear();
             Model = new Paciente_Negocio(Comun.Conexion);
+            LlenarCombo();
             llenar();
+        }
+        public void LlenarCombo()
+        {
+            Model.LlenarListaTratamiento();
+            cmbTratamiento.DataSource = Model.ListaTratamiento;
+            cmbTratamiento.DisplayMember = "Nombre";
+            cmbTratamiento.ValueMember = "IDTratamiento";
         }
         public void llenar()
         {
@@ -56,6 +65,7 @@ namespace Login
             txtColesterol.Text = paciente.NivColesterol.ToString();
             txtAcido.Text = paciente.NivAcidoUrico.ToString();
             txtTrigliserido.Text = paciente.NivTrigliceridos.ToString();
+            cmbTratamiento.SelectedValue = paciente.IDTratamiento;
         }
         public void redondear(Button btn)
         {
@@ -243,7 +253,7 @@ namespace Login
                     paciente.NivColesterol = Convert.ToDecimal(txtColesterol.Text);
                     paciente.NivAcidoUrico = Convert.ToDecimal(txtAcido.Text);
                     paciente.NivTrigliceridos = Convert.ToDecimal(txtTrigliserido.Text);
-                    
+                    paciente.IDTratamiento = Convert.ToInt32(this.cmbTratamiento.SelectedValue.ToString());
                     if (EsModificar)
                     {
                         Model.GuardarPacienteModificado(paciente);

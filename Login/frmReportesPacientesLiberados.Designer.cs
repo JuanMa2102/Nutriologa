@@ -31,12 +31,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLiberado = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLiberado)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -79,49 +79,52 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvLiberado
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvLiberado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLiberado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Tratamiento,
-            this.NumTel});
-            this.dataGridView1.Location = new System.Drawing.Point(288, 119);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 488);
-            this.dataGridView1.TabIndex = 21;
+            this.Telefono});
+            this.dgvLiberado.Location = new System.Drawing.Point(288, 119);
+            this.dgvLiberado.Name = "dgvLiberado";
+            this.dgvLiberado.Size = new System.Drawing.Size(543, 488);
+            this.dgvLiberado.TabIndex = 21;
             // 
             // Nombre
             // 
+            this.Nombre.DataPropertyName = "Nombre";
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.Width = 150;
             // 
             // Tratamiento
             // 
+            this.Tratamiento.DataPropertyName = "Tratamiento";
             this.Tratamiento.HeaderText = "Tratamiento";
             this.Tratamiento.Name = "Tratamiento";
             this.Tratamiento.Width = 200;
             // 
-            // NumTel
+            // Telefono
             // 
-            this.NumTel.HeaderText = "NumTelefonico";
-            this.NumTel.Name = "NumTel";
-            this.NumTel.Width = 150;
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "NumTelefonico";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.Width = 150;
             // 
             // frmReportesPacientesLiberados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 630);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvLiberado);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmReportesPacientesLiberados";
             this.Text = "frmReportesPacientesLiberados";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLiberado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,9 +135,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLiberado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tratamiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumTel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
     }
 }

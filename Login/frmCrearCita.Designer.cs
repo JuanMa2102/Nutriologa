@@ -168,9 +168,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DateTimePicker dtmFecha;
         private System.Windows.Forms.ComboBox cmbHorario;
         private System.Windows.Forms.ComboBox cmbPaciente;
-      
     }
 }

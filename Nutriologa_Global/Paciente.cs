@@ -22,5 +22,6 @@ namespace Nutriologa_Global
         public decimal NivAcidoUrico { get; set; }
 
         public string Tratamiento { get; set; }
+        public int IDTratamiento { get; set; }
     }
 }

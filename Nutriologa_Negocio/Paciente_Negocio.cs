@@ -13,10 +13,13 @@ namespace Nutriologa_Negocio
     {
         public string Conexion { get; set; }
         public BindingList<Paciente> ListaPaciente { get; set; }
+        public BindingList<Tratamiento> ListaTratamiento { get; set; }
+
         public Paciente_Negocio(string _Conexion)
         {
             Conexion = _Conexion;
             ListaPaciente = new BindingList<Paciente>(new List<Paciente>());
+            ListaTratamiento = new BindingList<Tratamiento>(new List<Tratamiento>());
             LlenarLista();
         }
         public Paciente ModificarPaciente(Paciente paciente)
@@ -47,6 +50,26 @@ namespace Nutriologa_Negocio
             Paciente_Datos pd = new Paciente_Datos();
             pd.EliminarPaciente(p, ref verificar);
         }
+
+        public void LlenarListaTratamiento()
+        {
+            try
+            {
+                ListaTratamiento.Clear();
+                Paciente_Datos RegionDatos = new Paciente_Datos();
+                List<Tratamiento> ListaAux = RegionDatos.ObtenerTratamiento(Conexion);
+                foreach (var Item in ListaAux)
+                {
+                    ListaTratamiento.Add(Item);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void GuardarPaciente(Paciente p, ref int verificar)
         {
             Paciente_Datos pd = new Paciente_Datos();

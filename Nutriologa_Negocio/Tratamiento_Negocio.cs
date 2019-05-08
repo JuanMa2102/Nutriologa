@@ -24,6 +24,26 @@ namespace Nutriologa_Negocio
             LlenarReportePacientesActivos();
         }
 
+        public void LlenarReportePacientesLiberados()
+        {
+            try
+            {
+                ListaReporteTratamiento.Clear();
+                Tratamiento_Datos RegionDatos = new Tratamiento_Datos();
+                List<Tratamiento> ListaAux = RegionDatos.ReportePacientesLiberados();
+                foreach (var Item in ListaAux)
+                {
+                    ListaReporteTratamiento.Add(Item);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        
+        }
+
         public void LlenarListaTratamiento()
         {
             try

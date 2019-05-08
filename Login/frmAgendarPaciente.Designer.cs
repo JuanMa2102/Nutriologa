@@ -28,15 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPaciente = new System.Windows.Forms.DataGridView();
-            this.IDPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlGrid = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -45,6 +40,19 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.IDPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Talla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NivColesterol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PromGrasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NivTrigliceridos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NivAcido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).BeginInit();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,82 +60,51 @@
             // 
             // dgvPaciente
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Black", 10.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPaciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 10.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPaciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDPaciente,
             this.Nombre,
             this.Fecha,
+            this.Tratamiento,
             this.Horario,
-            this.Edad});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPaciente.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Edad,
+            this.Estatura,
+            this.Talla,
+            this.Peso,
+            this.NivColesterol,
+            this.PromGrasa,
+            this.NivTrigliceridos,
+            this.NivAcido});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPaciente.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPaciente.Location = new System.Drawing.Point(18, 22);
             this.dgvPaciente.Name = "dgvPaciente";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPaciente.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPaciente.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPaciente.RowHeadersVisible = false;
             this.dgvPaciente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPaciente.Size = new System.Drawing.Size(973, 487);
             this.dgvPaciente.TabIndex = 0;
-            // 
-            // IDPaciente
-            // 
-            this.IDPaciente.DataPropertyName = "IDPaciente";
-            this.IDPaciente.HeaderText = "IDPaciente";
-            this.IDPaciente.Name = "IDPaciente";
-            this.IDPaciente.ReadOnly = true;
-            this.IDPaciente.Visible = false;
-            this.IDPaciente.Width = 175;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 320;
-            // 
-            // Fecha
-            // 
-            this.Fecha.DataPropertyName = "Apellido";
-            this.Fecha.HeaderText = "Apellido";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 300;
-            // 
-            // Horario
-            // 
-            this.Horario.DataPropertyName = "Telefono";
-            this.Horario.HeaderText = "Telefono";
-            this.Horario.Name = "Horario";
-            this.Horario.ReadOnly = true;
-            this.Horario.Width = 250;
-            // 
-            // Edad
-            // 
-            this.Edad.DataPropertyName = "Edad";
-            this.Edad.HeaderText = "Edad";
-            this.Edad.Name = "Edad";
             // 
             // label1
             // 
@@ -253,6 +230,102 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // IDPaciente
+            // 
+            this.IDPaciente.DataPropertyName = "IDPaciente";
+            this.IDPaciente.HeaderText = "IDPaciente";
+            this.IDPaciente.Name = "IDPaciente";
+            this.IDPaciente.ReadOnly = true;
+            this.IDPaciente.Visible = false;
+            this.IDPaciente.Width = 175;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 250;
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "Apellido";
+            this.Fecha.HeaderText = "Apellido";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 250;
+            // 
+            // Tratamiento
+            // 
+            this.Tratamiento.DataPropertyName = "Tratamiento";
+            this.Tratamiento.HeaderText = "Tratamiento";
+            this.Tratamiento.Name = "Tratamiento";
+            this.Tratamiento.ReadOnly = true;
+            this.Tratamiento.Width = 250;
+            // 
+            // Horario
+            // 
+            this.Horario.DataPropertyName = "Telefono";
+            this.Horario.HeaderText = "Telefono";
+            this.Horario.Name = "Horario";
+            this.Horario.ReadOnly = true;
+            this.Horario.Width = 200;
+            // 
+            // Edad
+            // 
+            this.Edad.DataPropertyName = "Edad";
+            this.Edad.HeaderText = "Edad";
+            this.Edad.Name = "Edad";
+            // 
+            // Estatura
+            // 
+            this.Estatura.DataPropertyName = "Estatura";
+            this.Estatura.HeaderText = "Estatura";
+            this.Estatura.Name = "Estatura";
+            this.Estatura.ReadOnly = true;
+            // 
+            // Talla
+            // 
+            this.Talla.DataPropertyName = "Talla";
+            this.Talla.HeaderText = "Talla";
+            this.Talla.Name = "Talla";
+            this.Talla.ReadOnly = true;
+            // 
+            // Peso
+            // 
+            this.Peso.DataPropertyName = "Peso";
+            this.Peso.HeaderText = "Peso";
+            this.Peso.Name = "Peso";
+            this.Peso.ReadOnly = true;
+            // 
+            // NivColesterol
+            // 
+            this.NivColesterol.DataPropertyName = "NivColesterol";
+            this.NivColesterol.HeaderText = "Nivel Colesterol";
+            this.NivColesterol.Name = "NivColesterol";
+            this.NivColesterol.ReadOnly = true;
+            // 
+            // PromGrasa
+            // 
+            this.PromGrasa.DataPropertyName = "PromGrasa";
+            this.PromGrasa.HeaderText = "Promedio Grasa";
+            this.PromGrasa.Name = "PromGrasa";
+            this.PromGrasa.ReadOnly = true;
+            // 
+            // NivTrigliceridos
+            // 
+            this.NivTrigliceridos.DataPropertyName = "NivTrigliceridos";
+            this.NivTrigliceridos.HeaderText = "Trigliceridos";
+            this.NivTrigliceridos.Name = "NivTrigliceridos";
+            this.NivTrigliceridos.ReadOnly = true;
+            // 
+            // NivAcido
+            // 
+            this.NivAcido.DataPropertyName = "NivAcidoUrico";
+            this.NivAcido.HeaderText = "Acido Urico";
+            this.NivAcido.Name = "NivAcido";
+            this.NivAcido.ReadOnly = true;
+            // 
             // frmAgendarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,7 +366,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPaciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tratamiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Horario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Talla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Peso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NivColesterol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PromGrasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NivTrigliceridos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NivAcido;
     }
 }
