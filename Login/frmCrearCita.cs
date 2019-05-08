@@ -86,20 +86,24 @@ namespace Login
         {
             try
             {
-                int verificar = 1;
-                Cita c = new Cita();
-                c.IDNombre = Convert.ToInt32(this.cmbPaciente.SelectedValue.ToString());
-                c.Fecha = dtmFecha.Value;
-                c.IDHorario = Convert.ToInt32(this.cmbHorario.SelectedValue.ToString());
-                Model.CrearCita(c, ref verificar);
-                if (verificar == 1)
+                if (dtmFecha.Value.Date < DateTime.Now.Date)
                 {
-                    this.Close();
+                    int verificar = 1;
+                    Cita c = new Cita();
+                    c.IDNombre = Convert.ToInt32(this.cmbPaciente.SelectedValue.ToString());
+                    c.Fecha = dtmFecha.Value;
+                    c.IDHorario = Convert.ToInt32(this.cmbHorario.SelectedValue.ToString());
+                    Model.CrearCita(c, ref verificar);
+                    if (verificar == 1)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
                 }
-                else
-                {
-                    this.Close();
-                }
+                MessageBox.Show("Selecciones una fecha valida", "Sistema Nutriologa DS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {

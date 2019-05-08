@@ -20,7 +20,7 @@ namespace Login
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmCitasporPeriodo());
-            Application.Run(new frmLogin());
+            Application.Run(new frmAgendarCita());
             //Application.Run(new frmCrearCita());
         }
     }

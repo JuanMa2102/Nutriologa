@@ -69,6 +69,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(245, 20);
             this.txtApellido.TabIndex = 11;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
@@ -77,6 +78,7 @@
             this.txtNombre.Size = new System.Drawing.Size(245, 20);
             this.txtNombre.TabIndex = 10;
             this.txtNombre.TextChanged += new System.EventHandler(this.campo1_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // Titulo
             // 

@@ -18,6 +18,7 @@ namespace Login
 
         private Cita_Negocio Model { get; set; }
         Cita cita = new Cita();
+        Validaciones Val;
         public bool salir = false;
         public frmConsultarCita()
         {
@@ -98,12 +99,29 @@ namespace Login
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
-            IngresarDatos();
-            //frmAgendarCita agendar = new frmAgendarCita(cita);
-            //agendar.ShowDialog();
-            //agendar.Dispose();
-            frmAgendarCita.BuscarCita = cita;
-            this.Close();
+            if (verificar())
+            {
+                IngresarDatos();
+                frmAgendarCita.BuscarCita = cita;
+                this.Close();
+            }
+            else
+                MessageBox.Show("Campos Incompletos", "Sistema Nutriologa DS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public bool verificar()
+        {
+            if(txtNombre.TextLength == 0)
+            {
+                txtNombre.Focus();
+                return false;
+            }
+            else
+            if(txtApellido.TextLength == 0)
+            {
+                txtApellido.Focus();
+                return false;
+            }
+            return true;
         }
         public void IngresarDatos()
         {
@@ -119,6 +137,32 @@ namespace Login
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                Val = new Validaciones();
+                Val.SoloTexto(e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Sistema Nutriologa DS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                Val = new Validaciones();
+                Val.SoloTexto(e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Sistema Nutriologa DS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -17,6 +17,8 @@ namespace Login
     {
         private Tratamiento_Negocio Model { get; set; }
         public int id_tratamiento = 0 ;
+        Validaciones Val;
+
         Tratamiento tratamiento = new Tratamiento();
         public bool salir = false;
         public frmNuevoTratamiento()
@@ -71,25 +73,69 @@ namespace Login
         #endregion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Tratamiento t = new Tratamiento();
-            t.IDTratamiento = id_tratamiento;
-            t.Nombre = txtNombre.Text;
-            t.Descripcion = txtDescripcion.Text;
-            if (id_tratamiento != 0)
+            if (verificar())
             {
-                Model.GuardarTratamientoModificado(t);
-                this.Close();
+                Tratamiento t = new Tratamiento();
+                t.IDTratamiento = id_tratamiento;
+                t.Nombre = txtNombre.Text;
+                t.Descripcion = txtDescripcion.Text;
+                if (id_tratamiento != 0)
+                {
+                    Model.GuardarTratamientoModificado(t);
+                    this.Close();
+                }
+                else
+                {
+                    Model.GuardarTratamiento(t);
+                    Close();
+                }
+            }
+            MessageBox.Show("Campos Incompletos", "Sistema Nutriologa DS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public bool verificar()
+        {
+            if (txtNombre.TextLength == 0)
+            {
+                txtNombre.Focus();
+                return false;
             }
             else
+            if (txtDescripcion.TextLength == 0)
             {
-                Model.GuardarTratamiento(t);
-                Close();
+                txtDescripcion.Focus();
+                return false;
             }
+            return true;
         }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Close(); 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                Val = new Validaciones();
+                Val.SoloTexto(e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Sistema Nutriologa DS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                Val = new Validaciones();
+                Val.SoloAlfaNumerico(e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Sistema Nutriologa DS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

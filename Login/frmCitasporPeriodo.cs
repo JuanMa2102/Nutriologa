@@ -66,11 +66,14 @@ namespace Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            IngresarDatos();
-            llenarForm();
-           
-
-
+            
+            if (dtmFechaFi.Value.Date >= dtmFechaIn.Value.Date)
+            {
+                IngresarDatos();
+                llenarForm();
+            }
+            else
+                MessageBox.Show("Seleccione fecha valida", "Sistema Nutriologa DS", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         public void IngresarDatos()
         {

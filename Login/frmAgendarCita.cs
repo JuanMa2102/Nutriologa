@@ -115,6 +115,7 @@ namespace Login
             frmConsultarCita cita = new frmConsultarCita();
             cita.ShowDialog();
             cita.Dispose();
+            if(cita.salir == false)
             this.recargar();
         }
 
